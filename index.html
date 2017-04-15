@@ -2,64 +2,53 @@
 <html>
 <head>
     <title>ar1st0cratic pages</title>
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
-    <style>
-
-        #container {
-            align-content: center;
-            align-items: center;
-            font-family: 'Indie Flower', cursive;
-            font-size: 1.6em;
-        }
-
-        body, html {
-            height: 100%;
-            width: 100%;
-            text-align:center;
-        }
-
-        body {
-            background: rgba(39,98,131,1);
-            background: -webkit-linear-gradient(rgba(39,98,131,1) 0%, rgba(202,220,241,1) 27%, rgba(39,164,231,1) 100%);
-            background: -o-linear-gradient(rgba(39,98,131,1) 0%, rgba(202,220,241,1) 27%, rgba(39,164,231,1) 100%);
-            background: linear-gradient(rgba(39,98,131,1) 0%, rgba(202,220,241,1) 27%, rgba(202,220,241,100) 40%, rgba(39,164,231,1) 100%);
-        }
-
-        #container {
-            margin-top: 200px;
-        }
-
-        .main-icon {
-            margin: 5px;
-            width: 150px;
-            height: 150px;
-            text-align: center;
-            vertical-align: middle;
-            border: 1px solid rgba(39,90,211,0.25);
-            border-top-left-radius: 50%;
-            border-top-right-radius: 50%;
-            border-bottom-left-radius: 50%;
-            border-bottom-right-radius: 50%;
-            display: inline-block;
-            box-shadow: 5px 5px 5px 0 rgba(39,164,231,0.25);
-        }
-
-        .main-icon img {
-            padding-top: 30px;
-            margin-bottom: -30px;
-        }
-
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" /> 
+    <link rel="stylesheet" type="text/css" href="static/css/index.css" />
+    <script type="text/javascript" src="static/js/index.js"></script>
     <script>
-        function foo(argument) {
-            alert('OK!');
+        window.onload = function() {
+            random_corners();
         }
-
     </script>
 </head>
 <body>
+    <svg id='logo'>
+        <g>
+            <!-- stave -->
+            <line x1="20" y1="40" x2="380" y2="40" 
+            style="stroke-width:1; stroke: white" />
+            <line x1="20" y1="50" x2="380" y2="50" 
+            style="stroke-width:1; stroke: white" />
+            <line x1="20" y1="60" x2="380" y2="60" 
+            style="stroke-width:1; stroke: white" />
+            <line x1="20" y1="70" x2="380" y2="70" 
+            style="stroke-width:1; stroke: white" />
+            <line x1="20" y1="80" x2="380" y2="80" 
+            style="stroke-width:1; stroke: white" />
+
+            <!-- letter T -->
+            <line x1="135" y1="9" x2="185" y2="7" style="stroke-width:5; stroke: white" />
+            <image x="140" y="8" width="30" height="100" href="static/images/treble-clef.png" />
+
+            <!-- letter i -->
+            <ellipse cx="190" cy="50" rx="6" ry="3" stroke="white" stroke-width="1" fill="white"></ellipse>
+            <rect x="187" y="58" rx="2" ry="2" width="7" height="15" style="fill:white; stroke-width:1; stroke:white"></rect>
+            
+            <!-- letter m -->
+            <ellipse cx="210" cy="80" rx="6" ry="3" stroke="white" stroke-width="1" fill="white"></ellipse>
+            <ellipse cx="228" cy="70" rx="6" ry="3" stroke="white" stroke-width="1" fill="white"></ellipse>
+            <ellipse cx="246" cy="60" rx="6" ry="3" stroke="white" stroke-width="1" fill="white"></ellipse>
+            <line x1="215" y1="80" x2="215" y2="42" style="stroke-width:2; stroke: white" />
+            <line x1="233" y1="70" x2="235" y2="32" style="stroke-width:2; stroke: white" />
+            <line x1="251" y1="60" x2="255" y2="22" style="stroke-width:2; stroke: white" />
+            <line x1="215" y1="46" x2="255" y2="26" style="stroke-width:2; stroke: white" />
+            <line x1="215" y1="44" x2="255" y2="24" style="stroke-width:2; stroke: white" />
+            <line x1="215" y1="42" x2="255" y2="22" style="stroke-width:2; stroke: white" />
+        </g> 
+    </svg>
     <div id="container">
-        <div id="main" onclick="foo();">
+        <div id="main">
             <div class='main-icon'>
                 <img src='static/images/music.png' />
                 <p>music</p>
@@ -82,15 +71,9 @@
             </div>
         </div>
     </div>
-    <script>
-        alert('OK!');
-        var elems = document.getElementsByClassName('main-icon');
-        for (var i=0; i<elems.length; i++) {
-            elems[i].style.border-top-left-radius = "20%";
-            elems[i].style.border-top-right-radius = "20%";
-            elems[i].style.border-bottom-left-radius = "20%";
-            elems[i].style.border-bottom-right-radius = "20%";
-        }
-    </script>
+    <div id='about'>
+        <p>Just a human being with a PhD</p>
+        <p>&copy; 2017 Tim Sharii</p>
+    </div>
 </body>
 </html>
