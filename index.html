@@ -7,9 +7,7 @@
     <link rel="stylesheet" type="text/css" href="static/css/index.css" />
     <script type="text/javascript" src="static/js/index.js"></script>
     <script>
-        window.onload = function() {
-            random_corners();
-        }
+        window.onload = createActivities;
     </script>
 </head>
 <body>
@@ -48,32 +46,13 @@
         </g> 
     </svg>
     <div id="container">
-        <div id="main">
-            <div class='main-icon'>
-                <img src='static/images/music.png' />
-                <p>music</p>
-            </div>
-            <div class='main-icon'>
-                <img src='static/images/coding.png' />
-                <p>coding</p>
-            </div>
-            <div class='main-icon'>
-                <img src='static/images/teaching.png' />
-                <p>teaching</p>
-            </div>
-            <div class='main-icon'>
-                <img src='static/images/writing.png' />
-                <p>writing</p>
-            </div>
-            <div class='main-icon'>
-                <img src='static/images/science.png' />
-                <p>science</p>
-            </div>
-        </div>
+        <div id="main" />
+    </div>
+    <div id='desc'>
     </div>
     <div id='about'>
-        <p>Just a human being with a PhD</p>
-        <p>&copy; 2017 Tim Sharii</p>
+        &copy; 2017 Tim Sharii<br/>
+        Just a human being with a PhD
     </div>
 </body>
 </html>

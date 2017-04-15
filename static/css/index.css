@@ -6,13 +6,11 @@ body {
     height: 100%;
     margin: 0;
     text-align: center;
-}
-
-body {
+    //background: url("../images/bg.jpg") repeat;
     background: rgba(39,98,131,1);
     background: -webkit-linear-gradient(rgba(40,100,121,1) 0%, rgba(200,220,240,1) 25%, rgba(200,220,240,50) 35%, rgba(39,165,230,1) 100%);
     background: -o-linear-gradient(rgba(40,100,121,1) 0%, rgba(200,220,240,1) 25%, rgba(200,220,240,50) 35%, rgba(39,165,230,1) 100%);
-    background: linear-gradient(rgba(40,100,121,1) 0%, rgba(200,220,240,1) 25%, rgba(200,220,240,50) 30%, rgba(39,165,230,1) 100%);
+    background: linear-gradient(rgba(40,100,121,1) 0%, rgba(200,220,240,50) 40%, rgba(39,165,230,1) 100%);
 }
 
 #logo {
@@ -26,38 +24,43 @@ body {
     align-content: center;
     align-items: center;
     font-family: 'Indie Flower', cursive;
-    font-size: 1.6em;
+    font-size: 1.3em;
+    color: white;
 }
 
 .main-icon {
     margin: 5px;
-    width: 150px;
-    height: 150px;
+    width: 105px;
+    height: 105px;
     text-align: center;
     vertical-align: middle;
-    border: 1px solid rgba(39,90,211,0.25);
+    border: 1px solid white;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     display: inline-block;
-    box-shadow: 5px 5px 5px 0 rgba(39,164,231,0.25);
+    box-shadow: 15px 15px 15px 0 rgba(39,164,231,0.25);
 }
 
 .main-icon:hover {
-    background-color: rgba(250,254,251,0.25);
+    background-color: rgba(250,254,251,0.35);
     border: 1px solid rgba(250,254,251,0.25);
     box-shadow: 5px 5px 5px 0 rgba(40,40,40,0.25);
+    color: rgba(40,40,40,1);
     cursor: pointer;
 }
 
 .main-icon img {
-    padding-top: 30px;
-    margin-bottom: -30px;
+    padding-top: 15px;
+    margin-bottom: -25px;
+    width: 32px;
+    height: 32px;
 }
 
-#about {
+#desc {
     width: 400px;
+    height: 150px;
     margin: 50px auto;
     padding: 15px;
     color: white;
@@ -65,5 +68,16 @@ body {
     border-color: white;
     border-radius: 10px;
     font-family: 'Bree Serif';
-    font-size: 1.2em;
+    font-size:  0.8em;
+}
+
+#about {
+    font-family: 'Bree Serif';
+    font-size:  0.7em;
+}
+
+.language {
+    width: 90px;
+    height: 90px;
+    margin: 25px 20px 15px 20px;
 }

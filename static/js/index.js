@@ -1,4 +1,66 @@
-function random_corners() {
+activities = [
+    {
+        name: 'music',
+        pic: 'music.png',
+        desc: "There was a time when I...<br/>Well, here are some of my albums ))): <br/><br/>- Songs from the Bathroom (2007)<br/>- Ocelot's Wind (2009)<br/>- Philosopher's Stone (2011)"
+    },
+    {
+        name: 'coding',
+        pic: 'coding.png',
+        desc: "I love C#, C++ and Python!<br/><img src='static/images/csharp.png' class='language'><img src='static/images/cpp.png' class='language'><img src='static/images/python.png' class='language'>"
+    },
+    {
+        name: 'teaching',
+        pic: 'teaching.png',
+        desc: 'Courses I teach:<br/><br/>- Digital Signal Processing<br/>- Programming in Python<br/>- Object-oriented programming<br/>- Software development'
+    },
+    {
+        name: 'writing',
+        pic: 'writing.png',
+        desc: 'w'
+    },
+    {
+        name: 'science',
+        pic: 'science.png',
+        desc: "I'm interested in audio processing, fuzzy logic, machine learning and data mining.<br/><br/>Some of my papers can be found here..."
+    },
+];
+
+path = 'static/images/';
+
+DEFAULT_DESC = "<p>Hi there! I'm Tim.</p>I like unravelling mysteries of all kinds and learning everything that human mind can possibly bring us, i.e. science, music, poetry, arts, philosophy, etc.";
+
+
+function createActivities() {
+
+    var container = document.getElementById('main');
+
+    for (var i=0; i<activities.length; i++) {
+
+        var activity = document.createElement('div');
+        activity.setAttribute('class', 'main-icon');
+        
+        var img = document.createElement('img');
+        img.setAttribute('src', path + activities[i].pic);
+        activity.appendChild(img);
+
+        var p = document.createElement('p');
+        p.innerHTML = activities[i].name;
+        activity.appendChild(p);
+        
+        activity.onmouseenter = updateText(activities[i].desc);
+        
+        container.appendChild(activity);
+    }
+
+    initIcons();
+
+    updateText('');
+
+    document.getElementById('main').onmouseleave = updateText('');
+}
+
+function initIcons() {
     var elems = document.getElementsByClassName('main-icon');
     for (var i=0; i<elems.length; i++) {
         elems[i].style.borderTopLeftRadius = 40 + Math.random() * 10 + "%";
@@ -6,4 +68,17 @@ function random_corners() {
         elems[i].style.borderBottomLeftRadius = 40 + Math.random() * 10 + "%";
         elems[i].style.borderBottomRightRadius = 40 + Math.random() * 10 + "%";
     }
+}
+
+function updateText(desc) {
+    var txt = desc;
+
+    if (txt === '')
+        txt = DEFAULT_DESC;
+
+    function _update() {
+        document.getElementById('desc').innerHTML = txt;
+    }
+
+    return _update;
 }
