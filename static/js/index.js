@@ -1,34 +1,50 @@
-activities = [
+activities = 
+[
     {
-        name: 'music',
-        pic: 'music.png',
-        desc: "There was a time when I...<br/>Well, here are some of my albums ))): <br/><br/>- Songs from the Bathroom (2007)<br/>- Ocelot's Wind (2009)<br/>- Philosopher's Stone (2011)"
+        "name": "music",
+        "pic": "music.png",
+        "desc": "There was a time when I...<br/> \
+               Well, here are some of my albums ))): <br/><br/> \
+               - Songs from the Bathroom (2007)<br/> \
+               - Ocelot's Wind (2009)<br/> \
+               - Philosopher's Stone (2011)"
     },
     {
-        name: 'coding',
-        pic: 'coding.png',
-        desc: "I love C#, C++ and Python!<br/><img src='static/images/csharp.png' class='language'><img src='static/images/cpp.png' class='language'><img src='static/images/python.png' class='language'>"
+        "name": "coding",
+        "pic": "coding.png",
+        "desc": "I love C#, C++ and Python!<br/> \
+               <img src='static/images/csharp.png' class='language'> \
+               <img src='static/images/cpp.png' class='language'> \
+               <img src='static/images/python.png' class='language'>"
     },
     {
-        name: 'teaching',
-        pic: 'teaching.png',
-        desc: 'Courses I teach:<br/><br/>- Digital Signal Processing<br/>- Programming in Python<br/>- Object-oriented programming<br/>- Software development'
+        "name": "teaching",
+        "pic": "teaching.png",
+        "desc": "Courses I teach:<br/><br/> \
+               - Digital Signal Processing<br/> \
+               - Programming in Python<br/> \
+               - Object-oriented programming<br/> \
+               - Software development"
     },
     {
-        name: 'writing',
-        pic: 'writing.png',
-        desc: 'w'
+        "name": "writing",
+        "pic": "writing.png",
+        "desc": "<br/>To rephrase Annie Lennox:<br/><br/> \
+                 The poetic side of me is Donetsk-ish"
     },
     {
-        name: 'science',
-        pic: 'science.png',
-        desc: "I'm interested in audio processing, fuzzy logic, machine learning and data mining.<br/><br/>Some of my papers can be found here..."
+        "name": "science",
+        "pic": "science.png",
+        "desc": "I'm interested in audio processing, fuzzy logic, machine learning and data mining. \
+                <br/><br/>Some of my papers can be found here..."
     },
 ];
 
-path = 'static/images/';
+path = "static/images/";
 
-DEFAULT_DESC = "<p>Hi there! I'm Tim.</p>I like unravelling mysteries of all kinds and learning everything that human mind can possibly bring us, i.e. science, music, poetry, arts, philosophy, etc.";
+DEFAULT_DESC = "<p>Hi there! I'm Tim.</p> \
+               I like unravelling mysteries of all kinds and learning everything that human mind can possibly bring us, \
+               i.e. science, music, poetry, arts, philosophy, etc.";
 
 
 function createActivities() {
@@ -55,7 +71,7 @@ function createActivities() {
 
     initIcons();
 
-    updateText('');
+    updateText('')();
 
     document.getElementById('main').onmouseleave = updateText('');
 }
