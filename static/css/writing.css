@@ -14,12 +14,9 @@ body {
 
 #logo {
     width: 400px;
-    height: 110px;
-    padding: 10px;
-    margin-left: 80px;
+    height: 130px;
     margin-top: 25px;
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 10px;
+    //display: inline;
 }
 
 #main {
@@ -34,6 +31,7 @@ body {
     color: white;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1.4em;
+    background: rgba(0,0,0,0.3);
 }
 
 .collection-icon img {
