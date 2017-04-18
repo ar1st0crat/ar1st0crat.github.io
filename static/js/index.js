@@ -48,9 +48,8 @@ DEFAULT_DESC = "<p>Hi there! I'm Tim.</p> \
 
 
 function createActivities() {
-
     var container = document.getElementById('main');
-
+    
     for (var i=0; i<activities.length; i++) {
 
         var activity = document.createElement('div');
@@ -65,15 +64,16 @@ function createActivities() {
         activity.appendChild(p);
         
         activity.onmouseenter = updateText(activities[i].desc);
+        activity.onclick = clickActivity(activities[i].name);
         
         container.appendChild(activity);
     }
 
     initIcons();
 
-    updateText('')();
-
     document.getElementById('main').onmouseleave = updateText('');
+
+    updateText('')();
 }
 
 function initIcons() {
@@ -88,13 +88,16 @@ function initIcons() {
 
 function updateText(desc) {
     var txt = desc;
-
     if (txt === '')
         txt = DEFAULT_DESC;
 
-    function _update() {
+    return function () {
         document.getElementById('desc').innerHTML = txt;
     }
+}
 
-    return _update;
+function clickActivity(activity) {
+    return function () {
+        location.href = "views/" + activity + ".html";
+    }
 }
