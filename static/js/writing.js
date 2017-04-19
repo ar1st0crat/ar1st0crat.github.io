@@ -1,161 +1,81 @@
-collections = 
-[
+imagePath = '../static/images/';
+
+lyrics = '';
+
+
+function loadJSON(path, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function()
     {
-        "collection": "Сонеты",
-        "pic": "book.png",
-        "entries":
-        [
-            {
-                "name": "Сонет 1 - В тебе есть музыка",
-                "text": 
-                [
-                    "В тебе есть музыка, созвучная моей.",
-                     "Пускай, мы разные: ты арфа, я фагот.",
-                     "И хоть играем мы порой наоборот,",
-                     "Ты скажешь ноту - и роднюсь я с ней.",
-                     "",
-                     "Я слушаю тебя, и с каждым днем сильней",
-                     "Гремит аккорд, во мне переворот.",
-                     "Мой темп другой и строй, увы, не тот,",
-                     "Но как мне жить без стройности твоей?",
-                     "",
-                     "Твой каждый взгляд изысканно звучит.",
-                     "Весенним утром льется не спеша",
-                     "Твоя соната, и весь мир молчит.",
-                     "",
-                     "Я слушаю тебя едва дыша,",
-                     "И сердце в такт с твоим опять стучит,",
-                     "Дрожит с твоей струной моя душа."
-                ],
-                "written": "2011"
-            },
-            {
-                "name": "Сонет 2 - Она проста и этим гениальна",
-                "text": 
-                [
-                    "Уверен я, в простом сокрыта тайна,",
-                    "Но мы, увы, на показное падки.",
-                    "А в ней секреты мира, все загадки.",
-                    "Она проста. И этим гениальна!",
-                    "",
-                    "При сложности была б не идеальна.",
-                    "Томят не долгие, а те, что кратки,",
-                    "Движенья, взгляды, речи и повадки.",
-                    "Она чудна. Проста, но не банальна.",
-                    "",
-                    "Нет мишуры в ней, это так прекрасно,",
-                    "Что любоваться ею можно бесконечно.",
-                    "И так естественна, не тратится напрасно",
-                    "",
-                    "На то, что чуждо ей и что недолговечно.",
-                    "Проста и непроста (и ясно, и неясно),",
-                    "Без лишних украшений... безупречна."
-                ],
-                "written": "2011"
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                if (success)
+                    success(JSON.parse(xhr.responseText));
+            } else {
+                if (error)
+                    error(xhr);
             }
-        ]
-    },
-    {
-        "collection": "Лирический цикл 'while (true)'",
-        "pic": "book.png",
-        "entries":
-        [
-            {
-                "name": "Без макияжа",
-                "text": 
-                [
-                    "О, человек по имени Татьяна!",
-                    "Еще вчера я был в тебя влюблен,",
-                    "Когда во вьющемся дыму кальяна",
-                    "Был красотой твоею так ошеломлен.",
-                    "",
-                    "Когда ведомый простоватой страстью",
-                    "С Венерой неожиданно тебя сравнил",
-                    "И шубутным гормоном данной властью,",
-                    "Тебя я в стиле Казановы соблазнил.",
-                    "",
-                    "Но это было поздно, на закате суток,",
-                    "И ночь прошла так сказочно; с утра же",
-                    "Раздался крик, и был мой вопль жуток:",
-                    "Ты предо мною выросла без макияжа!..",
-                    "",
-                    "/Запись крика в mp3 доступна зарегистрированным пользователям/"
-                ],
-                "written": "2013"
-            },
-            {
-                "name": "Спасательный друг",
-                "text": 
-                [
-                    "Ты спасательный друг,",
-                     "Снова брошен в беде:",
-                     "Утопающий вдруг",
-                     "Усомнился в себе.",
-                     "",
-                     "Своей легкостью вновь",
-                     "Ты от бед его спас,",
-                     "Разогнал ему кровь",
-                     "И порадовал глаз.",
-                     "",
-                     "В его мире тревог",
-                     "Ты востребован, гость.",
-                     "Человеку помог...",
-                     "И повешен на гвоздь." 
-                ],
-                "written": "2012"
-            }
-        ]
-    }
-];
+        }
+    };
+    xhr.open("GET", path, true);
+    xhr.send();
+}
 
-path = "../static/images/";
-
-
-function createLyrics() {
+function fillLyrics(collections) {
     var container = document.getElementById('collections');
     
     for (var i=0; i<collections.length; i++) {
 
-        var collection = document.createElement('div');
-        collection.setAttribute('class', 'collection-icon');
+        var collection = document.createElement('li');
+        collection.setAttribute('class', 'collection');
         
         var img = document.createElement('img');
-        img.setAttribute('src', path + collections[i].pic);
+        img.setAttribute('src', imagePath + collections[i].pic);
         collection.appendChild(img);
 
-        var p = document.createElement('p');
-        p.innerHTML = collections[i].collection + ' (' + collections[i].entries.length + ')';
-        collection.appendChild(p);
-        
-        //activity.onmouseenter = updateText(activities[i].desc);
-        //activity.onclick = clickActivity(activities[i].name);
+        var span = document.createElement('span');
+        span.innerHTML = collections[i].collection + ' (' + collections[i].entries.length + ')';
+        collection.appendChild(span);
+
+        var list = document.createElement('ul');
+        list.setAttribute('class', 'dropdown-collection');
+        for (var j=0; j<collections[i].entries.length; j++) {
+            var entry = document.createElement('li');
+            entry.textContent = collections[i].entries[j].name;
+            entry.onclick = clickEntry(i, j);
+            list.appendChild(entry);
+        }
+        collection.appendChild(list);
         
         container.appendChild(collection);
     }
+}
 
-    var t = collections[0].entries[0].text;
+function createLyrics() {
+    loadJSON("../static/text/lyrics.json",
+                function(data) { 
+                    lyrics = data;
+                    fillLyrics(data);
+                },
+                function(xhr) { 
+                    console.error(xhr); 
+                }
+    );
+}
 
-    var textElement = document.getElementById('text');
+function clickEntry(colNo, entryNo) {
     
-    textElement.innerHTML = collections[0].entries[0].name.toUpperCase() + "<br/><br/>";
-    for (var i=0; i<t.length; i++) {
-        textElement.innerHTML += t[i] + "<br/>";
-    }
-    textElement.innerHTML += "<br/>(c) " + collections[0].entries[0].written;
-}
+    return function() {
+        var entry = lyrics[colNo].entries[entryNo];
+        
+        var textElement = document.getElementById('text');
+        
+        // TODO: make it a separate html tag
+        textElement.innerHTML = entry.name.toUpperCase() + "<br/><br/>";
 
-function updateText(desc) {
-    var txt = desc;
-    if (txt === '')
-        txt = DEFAULT_DESC;
-
-    return function () {
-        document.getElementById('desc').innerHTML = txt;
-    }
-}
-
-function clickActivity(activity) {
-    return function () {
-        location.href = "views/" + activity + ".html";
+        for (var i=0; i<entry.text.length; i++) {
+            textElement.innerHTML += entry.text[i] + "<br/>";
+        }
+        textElement.innerHTML += "<br/>(c) " + entry.written;
     }
 }

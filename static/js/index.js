@@ -35,7 +35,7 @@ activities =
     {
         "name": "science",
         "pic": "science.png",
-        "desc": "I'm interested in audio processing, fuzzy logic, machine learning and data mining. \
+        "desc": "<br/>I'm interested in audio processing, fuzzy logic, machine learning and data mining. \
                 <br/><br/>Some of my papers can be found here..."
     },
 ];

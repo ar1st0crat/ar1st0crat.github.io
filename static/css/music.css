@@ -21,6 +21,10 @@ body {
     margin-top: 25px;
 }
 
+#logo:hover {
+    cursor: pointer;
+}
+
 iframe {
     margin-bottom: 30px;
 }

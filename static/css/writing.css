@@ -20,44 +20,91 @@ body {
     margin-top: 25px;
 }
 
+#logo:hover {
+    cursor: pointer;
+}
+
 #main {
-    width: 800px;
+    width: 600px;
     margin: 10px auto;
+    margin-bottom: 170px;
 }
 
 #collections {
-    float: left;
-    width: 175px;
-    height: auto;
+    width: 570px;
+    margin-top: -10px;
+    padding-left: 15px;
+    padding-right: 15px;
     color: white;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 1.4em;
-    background: rgba(0,0,0,0.3);
+    font-size: 0.7em;
+    background: linear-gradient(rgba(0,0,0,0) 0%, rgb(0, 0, 0) 60%);
 }
 
-.collection-icon img {
-    width: 80px;
-    height: 80px;
+#collections li {
+    display: inline-block;
+}
+
+.collection {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    font-size: 1.4em;
+    text-align: left;
+}
+
+.collection:hover {
+    cursor: pointer;
+    color: yellow;
+}
+
+.collection img {
+    float: left;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    box-shadow: 5px 5px 5px 0 rgba(39,164,231,0.25);
+    box-shadow: 5px 5px 5px 0 rgba(250,250,251,0.25);
+}
+
+.collection span {
+    margin: 40px 40px 10px 10px;
+}
+
+.dropdown-collection {
+    display: none;
+    position: absolute;
+    margin: 25px;
+    padding: 5px 5px;
+    background: rgba(0,0,0,0.5);
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-collection li {
+    display: block;
+    padding: 5px 15px;
+}
+
+.collection:hover .dropdown-collection {
+    display: block;
 }
 
 #container {
-    float: left;
-    background: url("../images/sheet.jpg");
+    background: url("../images/sheet.png") no-repeat;
+    background-size: cover;
     align-content: center;
     align-items: center;
     width: 600px;
-    height: auto;
-    overflow: auto;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 30px;
 }
 
 #text {
     color: black;
     padding: 10px;
-    margin-left: 80px;
+    margin-left: 20px;
     font-size: 1.2em;
     font-family: 'Marck script', cursive, bold;
 }

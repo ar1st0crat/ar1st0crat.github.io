@@ -1,7 +1,7 @@
 [
     {
         "collection": "Сонеты",
-        "pic": "sonets.png",
+        "pic": "book.png",
         "entries":
         [
             {
@@ -56,11 +56,11 @@
     },
     {
         "collection": "Лирический цикл 'while (true)'",
-        "pic": "whiletrue.png",
+        "pic": "book.png",
         "entries":
         [
             {
-                "name": "Без макияжа",
+                "name": "БЕЗ МАКИЯЖА",
                 "text": 
                 [
                     "О, человек по имени Татьяна!",
@@ -83,7 +83,7 @@
                 "written": "2013"
             },
             {
-                "name": "Спасательный друг",
+                "name": "СПАСАТЕЛЬНЫЙ ДРУГ",
                 "text": 
                 [
                     "Ты спасательный друг,",
@@ -102,6 +102,668 @@
                      "И повешен на гвоздь." 
                 ],
                 "written": "2012"
+            },
+            {
+                "name": "ЭЙ, КРАСОТКА, ПОБЕРЕГИСЬ!",
+                "text":
+                [
+                    "(Стишок, который так хорошо начинался…)",
+                    "",
+                    "Полигамная сволочь подбивает клинья.",
+                    "Эй, красотка, поберегись!",
+                    "Скромно потупившись, скажет: 'один я',",
+                    "Смутные дни для тебя начались.",
+                    "",
+                    "Полигамная сволочь не допустит ошибки",
+                    "Там опыта, знай, что яда у змей.",
+                    "Он скор, как гепард, его методы гибки,",
+                    "Ты же овечка, и пикнуть не смей.",
+                    "",
+                    "Ржешь ты, как лошадь, – он смех твой похвалит.",
+                    "Ты кривонога – с гимнасткой сравнит.",
+                    "И комплиментами сходу завалит,",
+                    "Притянет он так, как не тянет магнит.",
+                    "",
+                    "Лучше, чем лесть, не придумано средства.",
+                    "С правдой по жизни ты будешь один.",
+                    "Наглость и ложь – лекарства от девства,",
+                    "В аптеках их нет, if you know what I mean.",
+                    "",
+                    "Часто не хочется нам присмотреться.",
+                    "Когда тебе врут, можно простить,",
+                    "Когда тебя хвалят, можно согреться,",
+                    "Когда восторгаются – даже “любить”."
+                ],
+                "written": "2011"
+            },
+            {
+                "name": "ГРАЦИЯ",
+                "text": 
+                [
+                    "У Вероники есть грация. И она это знает. Это далеко не каждой девушке дано. И это она тоже знает. ",
+                    "Вообще говоря, это знание - одно из важнейших, которое она приобрела в своей жизни,",
+                    "и от этого ей бывает легко на душе, но не всегда. Иногда так хочется, чтобы это отметил кто-нибудь еще.",
+                    "Тогда бы она в знак молчаливого гордого согласия одарила собеседника признательным, хоть и высокомерным, взглядом. ",
+                    "Однако никто не торопится дать ей этот повод. Как-то раз приятель открыл было рот, глядя на нее и, как ей показалось, ",
+                    "на ее грацию, но выяснилось, что он просто хотел зевнуть. Нет, это возмутительно! ",
+                    "И к тому же, непонятно, ведь в окружении Вероники молчунов нет. И подругам никогда не дают забывать об их достоинствах и прелестях. ",
+                    "Вот у Ольги, например, красивые глаза с каким-то загадочным голубым оттенком. Так ведь и дня не проходит, ",
+                    "чтобы кто-нибудь не повосхищался ими вслух. А Лена! Постоянно слышит комплименты в адрес своих густых пышных волос.",
+                    "А у Вероники есть монета поценнее, нечто получше: у нее есть грация... Но никому нет до этого дела. ",
+                    "Да еще ладно, когда ботаник Саша, этот невзрачный заучка, молчит, или папин знакомый, лысый сантехник дядя Коля. ",
+                    "Пускай! Что они понимают в женщинах? Но вот Паша Антонов, парень с длинными ресницами, томным взглядом и осанкой, ",
+                    "выдающей в нем человека благородного и достойного, не обращает внимания. Это уже перебор. Неужели такой красивый человек ",
+                    "может не замечать и не восхищаться другим красивым человеком? Самовлюбленный эгоист! Считает себя непревзойденным ",
+                    "знатоком женских сердец, на которого женщины сами вешаются. А сам, между тем, не может даже грациозную девушку из безликой ",
+                    "кукольной толпы выделить! 'Poor little girl', - сказал однажды Веронике знакомый из Мемфиса. И опять ни слова о грации. ",
+                    "Ну что за невезение!"
+                ],
+                "written": "2011"
+            },
+            {
+                "name": "20 ЛЕТ ВОЗДЕРЖАНЬЯ",
+                "text": 
+                [
+                    "Полуэкт Себялюбкин:",
+                    "",
+                    "Двадцать лет воздержанья – и вот я могуч,",
+                    "Я в форме, на редкость силен и прыгуч.",
+                    "Диссер написан, рекорды побиты,",
+                    "Здоровым румянцем щеки налиты.",
+                    "",
+                    "Пышна шевелюра, и кубики есть,",
+                    "Я пресс напрягу – и видно: их шесть.",
+                    "Двадцать лет воздержанья – и мысли легки.",
+                    "Воздержанья от спирта! (А Вы – пошляки!)"
+                ],
+                "written": "2011"
+            },
+            {
+                "name": "ПОД КАБЛУКОМ",
+                "text": 
+                [
+                    "У меня был друг, он теперь далеко,",
+                    "Хоть из города не уезжал,",
+                    "У него новый дом – где-то под каблуком,",
+                    "Что вонзился в него, как кинжал.",
+                    "",
+                    "Раньше друг был хорош, всем мужчинам в пример,",
+                    "А сейчас – неприметен и сер.",
+                    "Хоть фигурой был лучше гребцов, что с галер!",
+                    "Был завидный для дам кавалер!",
+                    "",
+                    "В новой роли ему, если честно сказать,",
+                    "Жмет и давит смешной реквизит.",
+                    "В каждом жесте и реплике, что и скрывать,",
+                    "Женский текст режиссера сквозит.",
+                    "",
+                    "Возвращайся, дружище, да поскорей.",
+                    "Возвращайся к нам, в клуб мужиков!",
+                    "Не бывает цариц! Приветствуй царей!",
+                    "От каблучных избавься оков!"
+                ],
+                "written": "2013"
+            },
+            {
+                "name": "О НЕСООТВЕТСТВИИ КУПИДОНОВ ГОСТУ ОТ 1248 ГОДА",
+                "text": 
+                [
+                    "Пьяный нынче Купидон –",
+                    "Очень часто мажет.",
+                    "Может выстрелить, пардон,",
+                    "Ниже пупа даже.",
+                    "",
+                    "Или голову снести,",
+                    "Что, опять же, глупо.",
+                    "Мозгом чувства не спасти.",
+                    "Сердце – вот наш рупор.",
+                    "",
+                    "Лучше целься, старина,",
+                    "А то мы страдаем.",
+                    "Доигрались: вот те-на,",
+                    "Как любить не знаем…"
+                ],
+                "written": "2011"
+            },
+            {
+                "name": "И ВОПРОС ЛИ?",
+                "text": 
+                [
+                    "Что ж, я пропал: мой мир – в ее власти;",
+                    "Один лишь вопрос – что со мной? И вопрос ли?",
+                    "Улыбка ее делит жизнь на две части –",
+                    "Серую “До” и яркую “После”."
+                ],
+                "written": "2011"
+            },
+            {
+                "name": "ВЛЮБИЛАСЯ (ВЛЮБИ ЛОСЯ!)",
+                "text": 
+                [
+                    "Рoor-poor-ная девчонка:",
+                    "",
+                    "Не поставил никто знака СТОПу",
+                    "И влюбилась я с первого взгляда,",
+                    "Правда, взгляд пришелся на попу,",
+                    "Выходящую вон из ряда!",
+                    "",
+                    "И потом отзеркалились формы",
+                    "В моей чуткой душе, как в водице.",
+                    "Шарик бицепса, грудь – выше нормы,",
+                    "Да, в хозяйстве такой пригодится.",
+                    "",
+                    "А когда он еще улыбнулся,",
+                    "Голливуд закурил в сторонке!",
+                    "Так пластично ко мне повернулся.",
+                    "Я не вру вам, поверьте, девчонки!",
+                    "",
+                    "Но уже через пару минуток",
+                    "В отношеньях, увы, жахнул кризис:",
+                    "Его речь и поток пресных шуток",
+                    "Ох, не так, как лицо его, pleases.",
+                    "",
+                    "Снова компас мой обломился,",
+                    "И любовушка кончилась снова,",
+                    "Не дождусь от того, кто мне снился,",
+                    "Ни нормального дела, ни слова."
+                ],
+                "written": "2011"
+            },
+            {
+                "name": "НЕ УДИВЛЯТЬ, А БОЛЬШЕ УДИВИТЬСЯ",
+                "text": 
+                [
+                    "Взгляните на ребенка, разве он стремится",
+                    "Казаться лучше? Разве лицемерит?",
+                    "Не хочет удивлять, а больше – удивиться.",
+                    "Он видит чудо в новом дне и верит.",
+                    "",
+                    "Теперь на взрослого и “мудрого” взгляните,",
+                    "Познал он мир, собрал все урожаи.",
+                    "И раз открыл он всескрепляющие нити,",
+                    "То всех своей харизмой поражает.",
+                    "",
+                    "Нам хочется в глазах других быть выше",
+                    "Того, что все мы есть на самом деле.",
+                    "И врем другим так часто, как и дышим.",
+                    "При мысли, что поём, мы в стаде блеем…"
+                ],
+                "written": "2013"
+            }
+        ]
+    },
+    {
+        "collection": "Songs",
+        "pic": "music.png",
+        "entries":
+        [
+            {
+                "name": "DEVIL’S OFFICE",
+                "text": 
+                [
+                    "You’re goin’ there, deeper underground",
+                    "And you don’t look back and make no sound.",
+                    "You enter the strangest room you’ve seen",
+                    "And now you’re exploring the place you’re in –",
+                    "",
+                    "The lamps of emotions shine a light",
+                    "The more you do wrong – the more they’re bright.",
+                    "And all your deeds are here in the drawer",
+                    "It’s only your life – illusions are over.",
+                    "",
+                    "You’re lookin’ around – there is no soul",
+                    "No creature, no plant, no man at all.",
+                    "And even the walls are deaf and dumb",
+                    "But lamps are alive and play around.",
+                    "",
+                    "The lamps of emotions shine a light",
+                    "The more you do wrong – the more they’re bright.",
+                    "And all your deeds are here in the drawer",
+                    "It’s only your life – illusions are over."
+                ],
+                "written": "2011"
+            },
+            {
+                "name": "THE WORLD’S TURNING WITHOUT YOU",
+                "text": 
+                [
+                   "You want to be the best",
+                   "To be the idol for the rest",
+                   "You call them bunch",
+                   "",
+                   "But the world keeps turning without you",
+                   "Oh, the whole world’s turning without you",
+                   "Without-you-turning world…",
+                   "",
+                   "You think you are so cool",
+                   "But you are nothing but a fool",
+                   "Self-loving mind",
+                   "",
+                   "Now the world keeps turning without you",
+                   "Yes, the whole world’s turning without you",
+                   "(Without-you-turning world…)",
+                   "",
+                   "Well do you enjoy your life?",
+                   "And how does it make you feel",
+                   "When you go alone for a drive?",
+                   "It must be so… unreal…",
+                   "",
+                   "Now the augury is strong",
+                   "You’ll find that you are wrong",
+                   "With all your thoughts",
+                   "",
+                   "And the world won’t be turning without you,",
+                   "Yes the world won’t be turning without you!",
+                   "Without-you-turning world…"
+                ],
+                "written": "2007"
+            },
+            {
+                "name": "SERVE THE RING",
+                "text": 
+                [
+                    "Hello! Hello! Hello! I’m a husband!",
+                    "Shaved so close and smelling like a scent",
+                    "Head is fully loaded with the problems",
+                    "How to feed the house and pay the rent",
+                    "",
+                    "Yesterday I served the Love",
+                    "But now I serve the Ring",
+                    "Polishing my master everyday.",
+                    "Yesterday I took the vows",
+                    "And now I can’t take wing",
+                    "I wish that I could start again",
+                    "The life I threw away",
+                    "",
+                    "Get up! Get up! Get up! Time for breakfast!",
+                    "(Breakfast waits for me)",
+                    "Eat it quick and go acquire our wealth",
+                    "(Go to work! Go for wealth!)",
+                    "You must be example for the eldest",
+                    "(He’s almost adult)",
+                    "Sold the sympho-prog for wedding bells",
+                    "(Wedding bells la-la-la-la…)"
+                ],
+                "written": "2007"
+            },
+            {
+                "name": "BEYOND THE HORIZON",
+                "text": 
+                [
+                    "Beyond the horizon,",
+                    "Beyond the horizon",
+                    "Is there a shelter,",
+                    "A shelter from fear?",
+                    "Beyond the horizon,",
+                    "Beyond the horizon",
+                    "Can life be better,",
+                    "Better than here?..",
+                    "",
+                    "Dream can be stronger than bison",
+                    "Thoughts may be faster than light",
+                    "Somewhere beyond the horizon",
+                    "Everything’s changed,",
+                    "Nothing has died.",
+                    "",
+                    "Questions don’t always need answers",
+                    "What people need is the faith",
+                    "Mankind must now take the chances",
+                    "Discover horizon",
+                    "Before it’s too late",
+                    "(Before the drum beat!)",
+                    "",
+                    "Beyond the horizon,",
+                    "Beyond the horizon",
+                    "Is there a river,",
+                    "A river of love?",
+                    "Beyond the horizon,",
+                    "Beyond the horizon",
+                    "Will we all shiver,",
+                    "Shiver from laugh?.."
+                ],
+                "written": "2007"
+            },
+            {
+                "name": "PILLOW OF DREAMS",
+                "text": 
+                [
+                    "Ride the night winds and the stars",
+                    "The time has come to travel",
+                    "( See the life around",
+                    "Feel the life around",
+                    "Touch the life around )",
+                    "Tangled skein of day-time thoughts",
+                    "Ain’t easy to unravel",
+                    "( See the life around",
+                    "Feel the life around",
+                    "Touch the life around )",
+                    "You will use another mind",
+                    "Like an earth, like a tree, like a sky…",
+                    "Now close your eyes",
+                    "",
+                    "Walk on the cloud – don’t be scared to go out of bed",
+                    "Fly in the night  – let the winds carry you my friend",
+                    "Just be prepared for the trip as you lay your head",
+                    "Down on the pillow of dreams",
+                    "",
+                    "Moon gives the beams to your tired and lonely soul",
+                    "You start to shine as you enter the starlight hall",
+                    "Joy fills your heart and your mind as you slowly fall",
+                    "Down on the pillow of dreams"
+                ],
+                "written": "2007"
+            },
+            {
+                "name": "I SAW HER THERE",
+                "text": 
+                [
+                    "When I saw her there",
+                    "With a sun in her hair",
+                    "I could hardly stand at my feet.",
+                    "Well, she looked so good",
+                    "And I understood",
+                    "This girl is cute and so sweet",
+                    "",
+                    "Then she smiled like a child",
+                    "I began to lose my delicate control",
+                    "Tender lips, lovely eyes,",
+                    "Loveliness untold…",
+                    "She’s got prance, she’s got style",
+                    "She’s got everything a girl must have for sure",
+                    "She’s got charms, something wild,",
+                    "Out of this world…",
+                    "",
+                    "Then she went away",
+                    "Oh no, she flew away",
+                    "But I still remember her face",
+                    "And the sun in her hair",
+                    "The day I saw her there",
+                    "Changed my life in so many ways"
+                ],
+                "written": "2007"
+            },
+            {
+                "name": "A PEACE IN THE CAGE",
+                "text": 
+                [
+                    "HAMSTER:",
+                    "",
+                    "I don’t know why you are talkin ‘bout freedom",
+                    "And what do you mean then?",
+                    "Free to be eaten by owl in this dangerous world",
+                    "Full of fear?",
+                    "",
+                    "Alone in the cage",
+                    "It’s so safe, I can hide",
+                    "A peace in the cage",
+                    "Why should I go outside?",
+                    "",
+                    "I don’t want your freedom, I like when they smile",
+                    "Watching me eat the paper",
+                    "I’m lucky to live in my cell where the weather is fine",
+                    "Everyday",
+                    "",
+                    "Alone in the cage",
+                    "It’s so safe, I can hide",
+                    "A peace in the cage",
+                    "Why should I go outside?..",
+                    "",
+                    "",
+                    "CONTEMPLATIONS:",
+                    "",
+                    "Isn’t it strange – the people live inside",
+                    "An invisible cage built in their mind.",
+                    "The comfort it gives – it’s better than a light",
+                    "A shelter for thieves in the night",
+                    "The freedom’s betrayed by their wilts",
+                    "They live in a prison of their guilts",
+                    "They’re keeping their cage safe and clean"
+                ],
+                "written": "2007"
+            },
+            {
+                "name": "A CASTLE WITH NO WALLS",
+                "text": 
+                [
+                    "Steps in the night",
+                    "Like a beat of a drum",
+                    "Give me a fright",
+                    "And the rooms are so dumb",
+                    "Why am I here now?",
+                    "What do I fear now?",
+                    "Shadows of past",
+                    "Still remind me of time",
+                    "It doesn’t run fast",
+                    "In these walls with the slime",
+                    "Why am I here now?",
+                    "What do I fear now?",
+                    "",
+                    "I need a castle with no walls – they are binding me",
+                    "I need a place to call my ‘home sweet home’",
+                    "I need a castle with no walls – they’re surrounding me",
+                    "Now I wanna go to the fields where cold winds blow",
+                    "",
+                    "Smell of the wood",
+                    "Fills unaffable halls",
+                    "If only I could",
+                    "Freely walk through these walls",
+                    "What would I feel here?",
+                    "What would I be here?",
+                    "But shadows of past",
+                    "Still remind me of time",
+                    "It doesn’t run fast",
+                    "In these walls with the slime",
+                    "Why am I here now?",
+                    "What do I fear now?",
+                    "",
+                    "I need a castle with no walls – they are binding me",
+                    "I need a place to call my ‘home sweet home’",
+                    "I need a castle with no walls – they’re surrounding me",
+                    "Now… Now I want go… to the fields where cold winds blow"
+                ],
+                "written": "2007"
+            },
+            {
+                "name": "THE LONELIEST MAN IN THE WORLD",
+                "text": 
+                [
+                    "He’s the loneliest man in the world",
+                    "Ain’t got right for the friends from the start",
+                    "He’s got no one to talk to",
+                    "No one to walk to",
+                    "No one to fill his heart",
+                    "",
+                    "He’s the loneliest man in the world",
+                    "Did you see his inscrutable face?",
+                    "He’s alone with his feelings",
+                    "He ain’t got no dealings",
+                    "Alone with his royal grace",
+                    "",
+                    "He’s the loneliest man in the world",
+                    "Ain’t got right for the friends from the start",
+                    "He’s got no one to talk to",
+                    "No one to walk to",
+                    "No one to fill his heart…"
+                ],
+                "written": "2007"
+            },
+            {
+                "name": "WHAT WILL YOU DO?",
+                "text": 
+                [
+                    "Time in your hands",
+                    "Seasons of youth have changed",
+                    "Into tomorrow",
+                    "And they have told you",
+                    "Life is full of love",
+                    "",
+                    "So what will you do",
+                    "When you find out that love is hard to find?",
+                    "",
+                    "Where do you stand?",
+                    "Is it the ground or the cloud",
+                    "Where you have settled?",
+                    "You really think that",
+                    "Life is full of love",
+                    "",
+                    "So what will you do",
+                    "When you find out that love is hard to find?"
+                ],
+                "written": "2011"
+            },
+            {
+                "name": "AH! THOSE PEOPLE!",
+                "text": 
+                [
+                    "Ah! Those people! They shake their hands",
+                    "Livin’ in illusions, makin’ silly plans",
+                    "Ah! Those people! They can’t say why",
+                    "Do they want a luxury but ordinary life",
+                    "",
+                    "They wanna get up",
+                    "They don’t want to get down",
+                    "They wanna be rich",
+                    "And they want it right now",
+                    "They love when the comfort is",
+                    "Hidin’ their spirit away",
+                    "No no no no no",
+                    "",
+                    "Ah! Those people! What a great mistake!",
+                    "They always want to get a piece of someone else’s cake",
+                    "Ah! Those people! They always lie",
+                    "They live just like happy trees until the day they die",
+                    "",
+                    "They wanna get up",
+                    "They don’t want to get down",
+                    "They wanna be rich",
+                    "And they want it right now",
+                    "They love when the comfort is",
+                    "Hidin’ their spirit away",
+                    "",
+                    "Ah… Those people…",
+                    "They live inside,",
+                    "Inside the cages",
+                    "Built in their minds",
+                    "",
+                    "Don’t think it’s good"
+                ],
+                "written": "2011"
+            },
+            {
+                "name": "WORLD TREASURES",
+                "text": 
+                [
+                    "There are so many lands to discover",
+                    "There are so many seas to explore",
+                    "But I’ve got you on my mind",
+                    "And I don’t need to find",
+                    "The world treasures because",
+                    "I’ve got you",
+                    "",
+                    "Well, maybe it’s a bad way of thinking",
+                    "And maybe my feelings ain’t right",
+                    "But I don’t really care",
+                    "Just as long as you’re there",
+                    "Standing and smiling",
+                    "To me",
+                    "",
+                    "People look for the truth",
+                    "People searching the answers",
+                    "Stuck in the mess…",
+                    "You’re the whole world for me",
+                    "And I know all the secrets",
+                    "‘Cause love makes me wise",
+                    "‘Cause love makes me wise",
+                    "",
+                    "There are so many lands to discover",
+                    "There are so many seas to explore",
+                    "But I’ve got you on my mind",
+                    "And I don’t need to find",
+                    "The world treasures because",
+                    "I’ve got you"
+                ],
+                "written": "2010"
+            },
+            {
+                "name": "STILL LOVING YOU",
+                "text": 
+                [
+                    "What can I do? Still Loving you…",
+                    "And I know you’re gonna let me down.",
+                    "You think I’m a fool and you’ve won the prize",
+                    "‘Cause I’m at your feet and act like a clown.",
+                    "",
+                    "But I know you’ll give me a chance",
+                    "We’ll be happy together again",
+                    "‘Cause we know it’s just our dance",
+                    "The dance of emotions with tears in the rain"
+                ],
+                "written": "2011"
+            },
+            {
+                "name": "NO APOCALYPSE TODAY",
+                "text": 
+                [
+                    "Has the mankind reached the peak?",
+                    "Heads come heavy, minds come sick.",
+                    "Seems like all the news are bad,",
+                    "Every day is dark and sad,",
+                    "Useless livin', useless death,",
+                    "Human nature's out of breath,",
+                    "there's no hope at all...",
+                    "",
+                    "But the wise men are still here",
+                    "Looking through repentant tear;",
+                    "The musicians paint the world",
+                    "With the loveliness untold;",
+                    "And the actors on the stage",
+                    "Reproduce the Golden age.",
+                    "There is so much hope!..",
+                    "",
+                    "Life goes round and round -",
+                    "There's no up and down,",
+                    "Getting better every way.",
+                    "World is good to live,",
+                    "to create and to believe.",
+                    "No a-po-calypse today!",
+                    "",
+                    "See the laughin' children play",
+                    "They don't know why you decay.",
+                    "See the lovers walk in park",
+                    "They don't think their days are dark.",
+                    "And the Love, eternal savior,",
+                    "Gives the life the sweetest flavour.",
+                    "Life! There must be more!",
+                    "",
+                    "Life goes round and round -",
+                    "There's no up and down,",
+                    "Getting better every way.",
+                    "World is good to live,",
+                    "to create and to believe.",
+                    "No a-po-calypse today!"
+                ],
+                "written": "2006"
+            },
+            {
+                "name": "THE WORDS",
+                "text": 
+                [
+                    "The words are so easy to use",
+                    "But often they only abuse",
+                    "They make up a sentence and sentence makes sense",
+                    "The sense of this song is refuse.",
+                    "",
+                    "The words are all carried away",
+                    "With nothing to do or to say",
+                    "The words seem so empty when said by the fool",
+                    "But sure they can brighten the day.",
+                    "",
+                    "The things that are written on boards",
+                    "The words in addition to chords",
+                    "I’m tryin’ to explain now the meaning of song,",
+                    "This meaningless song with the words."
+                ],
+                "written": "2007"
             }
         ]
     }
