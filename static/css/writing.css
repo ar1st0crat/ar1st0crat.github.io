@@ -1,22 +1,23 @@
 html {
-    height: 1200px;//100%;
+    height: 100%;
 }
 
 body {
-    height: 1200px;//100%;
+    height: 100%;
     margin: 0;
+    padding-bottom: 40px;
     text-align: center;
-    background: rgba(39,98,131,1);
-    background: -webkit-linear-gradient(rgba(40,100,121,1) 0%, rgba(200,220,240,1) 25%, rgba(200,220,240,50) 35%, rgba(39,165,230,1) 100%);
-    background: -o-linear-gradient(rgba(40,100,121,1) 0%, rgba(200,220,240,1) 25%, rgba(200,220,240,50) 35%, rgba(39,165,230,1) 100%);
-    background: linear-gradient(rgba(40,100,121,1) 0%, rgba(200,220,240,50) 40%, rgba(39,165,230,1) 100%);
+    background: rgb(45, 50, 51);
+    background: -webkit-linear-gradient(rgb(45, 50, 51) 0%, rgb(82, 106, 130) 40%, rgb(82, 106, 130) 75%, rgb(40, 65, 78) 100%);
+    background: -o-linear-gradient(rgb(45, 50, 51) 0%, rgb(82, 106, 130) 40%, rgb(82, 106, 130) 75%, rgb(40, 65, 78) 100%);
+    background: linear-gradient(rgb(45, 50, 51) 0%, rgb(82, 106, 130) 40%, rgb(82, 106, 130) 60%, rgb(40, 65, 78) 100%);
+    background-attachment: fixed;
 }
 
 #logo {
     width: 400px;
-    height: 130px;
+    height: 120px;
     margin-top: 25px;
-    //display: inline;
 }
 
 #main {
@@ -43,7 +44,6 @@ body {
 
 #container {
     float: left;
-    box-shadow: 15px 15px 15px 0 lightgray;
     background: url("../images/sheet.jpg");
     align-content: center;
     align-items: center;

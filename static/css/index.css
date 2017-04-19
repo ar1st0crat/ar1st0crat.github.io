@@ -6,15 +6,16 @@ body {
     height: 100%;
     margin: 0;
     text-align: center;
-    background: rgba(39,98,131,1);
-    background: -webkit-linear-gradient(rgba(40,100,121,1) 0%, rgba(200,220,240,1) 25%, rgba(200,220,240,50) 35%, rgba(39,165,230,1) 100%);
-    background: -o-linear-gradient(rgba(40,100,121,1) 0%, rgba(200,220,240,1) 25%, rgba(200,220,240,50) 35%, rgba(39,165,230,1) 100%);
-    background: linear-gradient(rgba(40,100,121,1) 0%, rgba(200,220,240,50) 40%, rgba(39,165,230,1) 100%);
+    background: rgb(45, 50, 51);
+    background: -webkit-linear-gradient(rgb(45, 50, 51) 0%, rgb(82, 106, 130) 40%, rgb(82, 106, 130) 75%, rgb(40, 65, 78) 100%);
+    background: -o-linear-gradient(rgb(45, 50, 51) 0%, rgb(82, 106, 130) 40%, rgb(82, 106, 130) 75%, rgb(40, 65, 78) 100%);
+    background: linear-gradient(rgb(45, 50, 51) 0%, rgb(82, 106, 130) 40%, rgb(82, 106, 130) 60%, rgb(40, 65, 78) 100%);
+    background-attachment: fixed;
 }
 
 #logo {
     width: 400px;
-    height: 130px;
+    height: 120px;
     margin-top: 25px;
     display: inline;
 }
@@ -28,25 +29,20 @@ body {
 }
 
 .main-icon {
-    margin: 5px;
-    width: 105px;
-    height: 105px;
+    margin: 5px -5px -5px -5px;
+    width: 100px;
+    height: 100px;
     text-align: center;
     vertical-align: middle;
-    border: 1px solid white;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     display: inline-block;
-    box-shadow: 15px 15px 15px 0 rgba(39,164,231,0.25);
 }
 
 .main-icon:hover {
-    background-color: rgba(250,254,251,0.35);
-    border: 1px solid rgba(250,254,251,0.25);
-    box-shadow: 5px 5px 5px 0 rgba(40,40,40,0.25);
-    color: rgba(40,40,40,1);
+    background-color: rgba(250,254,251,0.15);
     cursor: pointer;
 }
 
