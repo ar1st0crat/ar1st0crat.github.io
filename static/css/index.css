@@ -1,24 +1,4 @@
-html {
-    height: 100%;
-}
-
-body {
-    height: 100%;
-    margin: 0;
-    text-align: center;
-    background: rgb(45, 50, 51);
-    background: -webkit-linear-gradient(rgb(45, 50, 51) 0%, rgb(82, 106, 130) 40%, rgb(82, 106, 130) 75%, rgb(40, 65, 78) 100%);
-    background: -o-linear-gradient(rgb(45, 50, 51) 0%, rgb(82, 106, 130) 40%, rgb(82, 106, 130) 75%, rgb(40, 65, 78) 100%);
-    background: linear-gradient(rgb(45, 50, 51) 0%, rgb(82, 106, 130) 40%, rgb(82, 106, 130) 60%, rgb(40, 65, 78) 100%);
-    background-attachment: fixed;
-}
-
-#logo {
-    width: 400px;
-    height: 120px;
-    margin-top: 25px;
-    display: inline;
-}
+@import url("main.css");
 
 #container {
     align-content: center;
@@ -66,25 +46,13 @@ body {
     font-size:  0.8em;
 }
 
-#github {
-    margin: -35px 5px 5px 5px;
-    width: 36px;
-    height: 36px;
-    opacity: 0.6;
-    cursor: pointer;
-}
-
-#github:hover {
-    opacity: 1;
-}
-
-#about {
-    font-family: 'Bree Serif';
-    font-size:  0.7em;
-}
-
 .language {
     width: 90px;
     height: 90px;
     margin: 25px 20px 15px 20px;
+}
+
+q {
+    color: rgb(200,200,200);
+    font-size: 1.2em;
 }

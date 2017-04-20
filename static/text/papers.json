@@ -1,0 +1,74 @@
+[
+    {
+        "russian": "О проблеме параметризации речевого сигнала в современных системах распознавания речи",
+        "english": "On the Problem of Speech Signal Parameterization in State-of-the-art Speech Recognition Systems",
+        "authors": "Шарий Т.В.",
+        "journal": "Вестник Донецкого национального университета. Том 2(2)",
+        "pages": "C.536-541",
+        "year": "2008",
+        "link": "2008 - Donnu.pdf"
+    },
+    {
+        "russian": "Об одном методе автоматической сегментации речевых сигналов",
+        "english": "On One Approach to Automatic Segmentation of Speech Signals",
+        "authors": "Шарий Т.В.",
+        "journal": "Бионика интеллекта. Том 2(71)",
+        "pages": "C.61-65",
+        "year": "2009",
+        "link": "2009 - Bionics.pdf"
+    },
+    {
+        "russian": "Об особенностях MFCC-кепстра на границах фонем в речевых сигналах",
+        "english": "On the characteristics of an MFCC-cepstrum at Phoneme Boundaries in Speech Signals",
+        "authors": "Каргин А.А., Шарий Т.В.",
+        "journal": "Вестник Херсонского национального технического университета. Том 1(34)",
+        "pages": "C.207-211",
+        "year": "2009",
+        "link": "2009 - Hntu.pdf"
+    },
+    {
+        "russian": "Применение нечеткой логики в системах фонологической классификации звуков речи",
+        "english": "Applying Fuzzy Logic in the Systems of Phonological Classification of Speech Sounds",
+        "authors": "Каргин А.А., Шарий Т.В.",
+        "journal": "Искусственный интеллект. Том 3",
+        "pages": "C.210-219",
+        "year": "2010",
+        "link": "2010 - AI.pdf"
+    },
+    {
+        "russian": "Голосовая аутентификация операторов, использующих в процессе работы нормативно установленную фразеологию",
+        "english": "Voice Authentication of Operators Who Use Regulated Phraseology During Work",
+        "authors": "Темников В.А., Шарий Т.В., Темникова Е.Л., Конфорович И.В.",
+        "journal": "Информационная безопасность. Том 1(5)",
+        "pages": "C.126-131",
+        "year": "2011",
+        "link": "2011 - IS.pdf"
+    },
+    {
+        "russian": "Модель постобработки речевых сигналов FCAS",
+        "english": "The FCAS Model of Speech Signal Postprocessing",
+        "authors": "Шарий Т.В.",
+        "journal": "Вестник Черниговского государственного технологического университета. Том 4(61)",
+        "pages": "C.157-165",
+        "year": "2012",
+        "link": "2012 - MODS.pdf"
+    },
+    {
+        "russian": "Голосовое управление мобильным роботом на основе когнитивной модели FCAS",
+        "english": "A Mobile Robot Voice Control Based on the FCAS Cognitive Model",
+        "authors": "Шарий Т.В.",
+        "journal": "Искусственный интеллект. Том 2(64)",
+        "pages": "C.75-84",
+        "year": "2014",
+        "link": "2014 - AI.pdf"
+    },
+    {
+        "russian": "Распознавание текста в зашумленных изображениях сканированных документов",
+        "english": "Text Recognition in Noisy Images of Scanned Documents",
+        "authors": "Шарий Т.В., Гукай А.Е., Котенко В.Н., Лялин Р.О.",
+        "journal": "Вестник Донецкого национального университета. Том 2",
+        "pages": "C.91-98",
+        "year": "2016",
+        "link": "2016 - Donnu.pdf"
+    }
+]

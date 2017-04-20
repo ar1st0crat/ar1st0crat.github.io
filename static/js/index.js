@@ -20,7 +20,7 @@ activities =
     {
         "name": "teaching",
         "pic": "teaching.png",
-        "desc": "Courses I teach:<br/><br/> \
+        "desc": "Courses I teach (hopefully good):<br/><br/> \
                - Digital Signal Processing<br/> \
                - Programming in Python<br/> \
                - Object-oriented programming<br/> \
@@ -30,7 +30,7 @@ activities =
         "name": "writing",
         "pic": "writing.png",
         "desc": "<br/>To rephrase Annie Lennox:<br/><br/> \
-                 The poetic side of me is Donetsk-ish"
+                 <q>The poetic side of me is Donetsk-ish</q>"
     },
     {
         "name": "science",

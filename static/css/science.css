@@ -1,0 +1,61 @@
+@import url("main.css");
+
+#logo:hover {
+    cursor: pointer;
+}
+
+#publications {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.publication {
+    display: inline-block;
+    width: 320px;
+    height: 300px;
+    overflow: auto;
+    background: rgba(250,250,250,0.2);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.publication:hover {
+    background: rgba(200,200,200,0.5);
+}
+
+.publication .pic {
+    float: left;
+    width: 70px;
+    text-align: center;
+}
+
+.pic img {
+    width: 40px;
+    height: 40px;
+}
+
+.publication .info {
+    margin-left: 75px;
+    text-align: left;
+    font-family: "Neucha";
+}
+
+.info span {
+    display: block;
+    margin: 3px;
+}
+
+.pubtitle {
+    color: lightyellow;
+    font-size: 1.1em;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#research {
+    border-top: 2px white solid;
+    width: 550px;
+    margin: 0 auto;
+    margin-top: 40px;
+}

@@ -1,25 +1,4 @@
-html {
-    height: 100%;
-}
-
-body {
-    height: 100%;
-    margin: 0;
-    text-align: center;
-    color: white;
-    font-family: "Bree Serif";
-    background: rgb(45, 50, 51);
-    background: -webkit-linear-gradient(rgb(45, 50, 51) 0%, rgb(82, 106, 130) 40%, rgb(82, 106, 130) 75%, rgb(40, 65, 78) 100%);
-    background: -o-linear-gradient(rgb(45, 50, 51) 0%, rgb(82, 106, 130) 40%, rgb(82, 106, 130) 75%, rgb(40, 65, 78) 100%);
-    background: linear-gradient(rgb(45, 50, 51) 0%, rgb(82, 106, 130) 40%, rgb(82, 106, 130) 60%, rgb(40, 65, 78) 100%);
-    background-attachment: fixed;
-}
-
-#logo {
-    width: 400px;
-    height: 120px;
-    margin-top: 25px;
-}
+@import url("main.css");
 
 #logo:hover {
     cursor: pointer;
