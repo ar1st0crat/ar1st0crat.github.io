@@ -7,7 +7,7 @@ function fillPapers(papers) {
 
     papers.sort(function(node1, node2) {
         return node1.year < node2.year;
-    })
+    });
     
     for (var i=0; i<papers.length; i++) {
 
@@ -20,7 +20,7 @@ function fillPapers(papers) {
         pic.setAttribute('class', 'pic');
 
         var img = document.createElement('img');
-        img.setAttribute('src', '../static/images/pdf.png');
+        img.setAttribute('src', imagePath + '/pdf.png');
         var link = document.createElement('a');
         link.setAttribute('href', paperPath + papers[i].link);
         link.appendChild(img);

@@ -39,9 +39,9 @@
     margin: 50px auto;
     padding: 15px;
     color: white;
-    border: 1px solid;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
     border-color: white;
-    border-radius: 10px;
     font-family: 'Bree Serif';
     font-size:  0.8em;
 }

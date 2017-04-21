@@ -1,0 +1,78 @@
+@import url("main.css");
+
+#logo:hover {
+    cursor: pointer;
+}
+
+#projects {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.project {
+    position: relative;
+    display: inline-block;
+    width: 440px;
+    height: 300px;
+    overflow: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+.project:hover .info {
+    display: none;
+}
+
+.project .info {
+    background: rgba(240,240,240,0.9);
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+    font-family: "Neucha";
+}
+
+.info span {
+    display: block;
+    margin: 3px;
+}
+
+.projtitle {
+    font-size: 1.5em;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.language {
+    font-size: 1.3em;
+    color: red;
+    padding: 10px;
+}
+
+.repolink {
+    visibility: hidden;
+    position: absolute;
+    left: 70px;
+    top: 250px;
+    background: rgba(90,90,90,0.9);
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    vertical-align: middle;
+    text-decoration: underline;
+    color: white;
+}
+
+.project:hover .repolink {
+    visibility: visible;
+    cursor: pointer;
+}
+
+#commercial {
+    border-top: 2px white solid;
+    width: 550px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
