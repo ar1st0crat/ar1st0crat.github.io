@@ -3,3 +3,53 @@
 #logo:hover {
     cursor: pointer;
 }
+
+#courses {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.course {
+    display: inline-block;
+    position: relative;
+    background: url('../images/blackboard.png') no-repeat;
+    background-size: contain;
+    opacity: 0.8;
+    width: 420px;
+    height: 220px;
+    overflow: auto;
+    margin: 10px;
+    padding: 2px;
+    border-radius: 10px;
+    font-family: "Neucha";
+}
+
+.course:hover {
+    opacity: 1;
+}
+
+.course h3 {
+    color: lightyellow;
+    text-transform: uppercase;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.course a {
+    text-decoration: none;
+    color: yellow;
+    background: rgba(0,0,0,0.4);
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 170px;
+    left: 327px;
+}
+
+.course span {
+    visibility: hidden;
+    font-size: 1.1em;
+    position: absolute;
+}
