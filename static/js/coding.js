@@ -86,12 +86,5 @@ function parseScreenshot(readme, project) {
 }
 
 function createProjects() {
-    loadJSON("https://api.github.com/users/ar1st0crat/repos",
-                function(data) { 
-                    fillProjects(data);
-                },
-                function(xhr) { 
-                    console.error(xhr); 
-                }
-    );
+    loadJSON("https://api.github.com/users/ar1st0crat/repos", fillProjects, function(xhr) { console.error(xhr); });
 }

@@ -64,12 +64,5 @@ function fillPapers(papers) {
 }
 
 function createPapers() {
-    loadJSON("../static/text/papers.json",
-                function(data) { 
-                    fillPapers(data);
-                },
-                function(xhr) { 
-                    console.error(xhr); 
-                }
-    );
+    loadJSON("../static/text/papers.json", fillPapers, function(xhr) { console.error(xhr); });
 }
