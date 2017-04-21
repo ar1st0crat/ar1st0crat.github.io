@@ -7,7 +7,6 @@
 #main {
     width: 600px;
     margin: 10px auto;
-    margin-bottom: 120px;
 }
 
 #collections {
@@ -87,4 +86,8 @@
     margin-left: 20px;
     font-size: 1.3em;
     font-family: 'Marck script';
+}
+
+#github {
+    margin-top: 120px;
 }

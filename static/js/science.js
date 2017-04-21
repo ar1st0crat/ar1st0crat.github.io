@@ -2,39 +2,6 @@ imagePath = '../static/images/';
 paperPath = '../static/papers/'
 
 
-function loadJSON(path, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function()
-    {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                if (success)
-                    success(JSON.parse(xhr.responseText));
-            } else {
-                if (error)
-                    error(xhr);
-            }
-        }
-    };
-    xhr.open("GET", path, true);
-    xhr.send();
-}
-
-/*
-        <article class="publication">
-            <div class="pic">
-                <img src='../static/images/pdf.png'/>
-                <span>2008</span>
-            </div>
-            <div class="info">
-                <span class="pubtitle">О проблеме параметризации речевого сигнала в современных системах распознавания речи</span>
-                <span class="pubtitle">On the Problem of Speech Signal Parameterization in State-of-the-art Speech Recognition Systems</span>
-                <span>Шарий Т.В.</span>
-                <span>Вестник Донецкого национального университета</span>
-                <span>С.536-541</span>
-            </div>
-        </article>
-*/
 function fillPapers(papers) {
     var container = document.getElementById('publications');
 

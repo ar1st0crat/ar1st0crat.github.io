@@ -5,47 +5,15 @@
     <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" /> 
     <link rel="stylesheet" type="text/css" href="../static/css/science.css" />
+    <script type="text/javascript" src="../static/js/jsonutil.js"></script>
     <script type="text/javascript" src="../static/js/science.js"></script>
     <script type="text/javascript">
         window.onload = createPapers;
     </script>
 </head>
 <body>
-    <svg id='logo' onclick="location.href='../index.html'">
-        <g>
-            <!-- stave -->
-            <line x1="20" y1="40" x2="380" y2="40" 
-            style="stroke-width:1; stroke: white" />
-            <line x1="20" y1="50" x2="380" y2="50" 
-            style="stroke-width:1; stroke: white" />
-            <line x1="20" y1="60" x2="380" y2="60" 
-            style="stroke-width:1; stroke: white" />
-            <line x1="20" y1="70" x2="380" y2="70" 
-            style="stroke-width:1; stroke: white" />
-            <line x1="20" y1="80" x2="380" y2="80" 
-            style="stroke-width:1; stroke: white" />
-
-            <!-- letter T -->
-            <line x1="135" y1="9" x2="185" y2="7" style="stroke-width:5; stroke: white" />
-            <image x="140" y="8" width="30" height="100" href="../static/images/treble-clef.png" />
-
-            <!-- letter i -->
-            <ellipse cx="190" cy="50" rx="6" ry="3" stroke="white" stroke-width="1" fill="white"></ellipse>
-            <rect x="187" y="58" rx="2" ry="2" width="7" height="15" style="fill:white; stroke-width:1; stroke:white"></rect>
-            
-            <!-- letter m -->
-            <ellipse cx="210" cy="80" rx="6" ry="3" stroke="white" stroke-width="1" fill="white"></ellipse>
-            <ellipse cx="228" cy="70" rx="6" ry="3" stroke="white" stroke-width="1" fill="white"></ellipse>
-            <ellipse cx="246" cy="60" rx="6" ry="3" stroke="white" stroke-width="1" fill="white"></ellipse>
-            <line x1="215" y1="80" x2="215" y2="42" style="stroke-width:2; stroke: white" />
-            <line x1="233" y1="70" x2="235" y2="32" style="stroke-width:2; stroke: white" />
-            <line x1="251" y1="60" x2="255" y2="22" style="stroke-width:2; stroke: white" />
-            <line x1="215" y1="46" x2="255" y2="26" style="stroke-width:2; stroke: white" />
-            <line x1="215" y1="44" x2="255" y2="24" style="stroke-width:2; stroke: white" />
-            <line x1="215" y1="42" x2="255" y2="22" style="stroke-width:2; stroke: white" />
-        </g> 
-    </svg>
-    <img src="../static/images/science.png" width="40" />
+    <img src="../static/logo.svg" id="logo" onclick="location.href='../index.html'" />
+    <img src="../static/images/science.png" width="40" style="position:absolute; top: 65px;" />
     <div id="publications">
         <p>Selected publications:</p>
     </div>
