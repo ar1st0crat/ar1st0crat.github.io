@@ -50,6 +50,7 @@ function clickEntry(colNo, entryNo) {
         var entry = lyrics[colNo].entries[entryNo];
         
         var textElement = document.getElementById('text');
+        textElement.style.fontSize = '1.3em';
         
         // TODO: make it a separate html tag
         textElement.innerHTML = entry.name.toUpperCase() + "<br/><br/>";
