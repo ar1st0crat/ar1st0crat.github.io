@@ -3,8 +3,8 @@ activities =
     {
         "name": "music",
         "pic": "music.png",
-        "desc": "There was a time when I...<br/> \
-               Well, here are some of my albums ))): <br/><br/> \
+        "desc": "There was even a time when I...<br/> \
+               Long story short, here are some of my albums ))): <br/><br/> \
                - Songs from the Bathroom (2007)<br/> \
                - Ocelot's Wind (2009)<br/> \
                - Philosopher's Stone (2011)"
@@ -20,7 +20,7 @@ activities =
     {
         "name": "teaching",
         "pic": "teaching.png",
-        "desc": "Courses I teach (hopefully good):<br/><br/> \
+        "desc": "Courses I taught (hopefully good):<br/><br/> \
                - Digital Signal Processing<br/> \
                - Programming in Python<br/> \
                - Object-oriented programming<br/> \

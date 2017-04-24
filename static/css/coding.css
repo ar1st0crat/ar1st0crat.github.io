@@ -72,7 +72,39 @@
 
 #commercial {
     border-top: 2px white solid;
-    width: 550px;
+    width: 80%;
+    max-width: 450px;
     margin: 0 auto;
     margin-top: 40px;
+}
+
+#commercial div {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+#commercial img {
+    width: 400px;
+    margin: 20px;
+}
+
+#commercial span {
+    display: inline-block;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 5px;
+    background: rgba(0,0,0,0.4);
+}
+
+#commercial li {
+    text-decoration: none;
+}
+
+.projname {
+    color: rgb(250,250,80);
+    font-size: 1.2em;
+    text-shadow: 2px 2px black;
 }
