@@ -15,11 +15,45 @@
 <body>
     <img src="../static/logo.svg" id="logo" onclick="location.href='../index.html'" />
     <img src="../static/images/science.png" width="40" style="position:absolute; top: 65px;" />
+    
+    <div id="skills">
+        <p>Scientific interests and skills</p>
+        <div id="dsp" onmouseenter="showSkills('dsp');" onmouseleave="hideSkills('dsp');">
+            <span>Digital Signal Processing</span>
+        </div>
+        <div id="ai" onmouseenter="showSkills('ai');" onmouseleave="hideSkills('ai');">
+            <span>Soft computing and ML</span>
+        </div>
+        <div id="synthesis" onmouseenter="showSkills('synthesis');" onmouseleave="hideSkills('synthesis');">
+            <span>Speech and music synthesis</span>
+        </div>
+        <svg width="450" height="500" viewBox="0 0 450 500">
+            <path d="M100 80 Q 220 20, 320 100" stroke="rgba(255,255,255,0.7)" stroke-width="5" fill="transparent" />
+            <path d="M390 140 Q 360 360, 240 380" stroke="rgba(255,255,255,0.7)" stroke-width="5" fill="transparent" />
+            <path d="M180 380 Q 10 260, 80 80" stroke="rgba(255,255,255,0.7)" stroke-width="5" fill="transparent" />
+        </svg>
+    </div>
     <div id="publications">
         <p>Selected publications:</p>
     </div>
     <div id="research">
-        <p>Research</p>
+        <p>My research in brief</p>
+        <div>
+            <p class="researchname">Speech data processing based on soft computing models</p>
+            <img src="../static/images/research.png" />
+            <p>Key features of the proposed technology:
+                <span>it segments a speech signal automatically on basis of Mel-Frequency Cepstrum (MFCC) and phonological differential features</span>
+                <img src="../static/images/segmentation.png" />
+                <span>it evaluates weights of speech segments depending on their perception by human (prosodic features are analyzed)</span>
+                <img src="../static/images/prosody.png" />
+                <span>it post-processes MFCC coefficients using Principal Component Analysis</span>
+                <img src="../static/images/pca.png" />
+                <span>it processes speech information at several levels: prosodic level, phonological feature level, phoneme level and word level</span>
+                <img src="../static/images/phonology.png" />
+                <span>it introduces the FCAS model whose kernel slightly resembles TRACE and LSTM networks</span>
+                <img src="../static/images/fcas.png" />
+            </p>
+        </div>
     </div>
     <a href="https://github.com/ar1st0crat">
         <img src="../static/images/github.png" id="github" alt="github.com/ar1st0crat"/>

@@ -73,7 +73,7 @@
 #commercial {
     border-top: 2px white solid;
     width: 80%;
-    max-width: 450px;
+    max-width: 750px;
     margin: 0 auto;
     margin-top: 40px;
 }
@@ -84,7 +84,7 @@
 }
 
 #commercial img {
-    width: 400px;
+    width: 70%;
     margin: 20px;
 }
 

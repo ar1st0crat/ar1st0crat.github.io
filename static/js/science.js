@@ -66,3 +66,28 @@ function fillPapers(papers) {
 function createPapers() {
     loadJSON("../static/text/papers.json", fillPapers, function(xhr) { console.error(xhr); });
 }
+
+function showSkills(id) {
+    var descriptions = 
+    {
+        'dsp': 'FFT, MFCC, PNCC, filtering, etc.',
+        'ai': 'fuzzy logic, neural networks, evolutionary algorithms, etc.',
+        'synthesis': 'LPC, pitch, digital sound effects, etc.'
+    };
+    var elem = document.querySelector('#' + id + ' span');
+
+    prevText = elem.textContent;
+
+    elem.textContent = descriptions[id];
+    elem.style.paddingTop = +(105 - descriptions[id].length) + 'px';
+    elem.style.textTransform = 'none';
+    elem.style.fontSize = '20px';
+}
+
+function hideSkills(id) {
+    var elem = document.querySelector('#' + id + ' span');
+    elem.textContent = prevText;
+    elem.style.textTransform = 'uppercase';
+    elem.style.paddingTop = '45px';
+    elem.style.fontSize = '26px';
+}
