@@ -54,7 +54,6 @@
 }
 
 #skills {
-    //border-top: 2px transparent solid;
     width: 80%;
     max-width: 450px;
     height: 500px;
@@ -128,13 +127,11 @@
     padding-bottom: 12px;
     padding-left: 20px;
     padding-right: 20px;
+    margin: 0 auto;
     margin-top: 25px;
-    color: white;
-    background: rgba(250,250,250,0.2);
-}
-
-#research li {
-    text-decoration: none;
+    width: 70%;
+    color: rgb(230,230,255);
+    text-shadow: 1px 1px black;
 }
 
 .researchname {

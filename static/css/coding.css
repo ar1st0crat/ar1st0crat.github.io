@@ -72,10 +72,10 @@
 
 #commercial {
     border-top: 2px white solid;
-    width: 80%;
     max-width: 750px;
     margin: 0 auto;
     margin-top: 40px;
+    width: 80%;
 }
 
 #commercial div {
