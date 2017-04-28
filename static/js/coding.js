@@ -21,7 +21,7 @@ function fillProjects(projects) {
     projects = projects.filter(shouldProjectBeShown);
     // sort by update date in descending order
     projects.sort(function(node1, node2) {
-        return new Date(node1.updated_at) < new Date(node2.updated_at);
+        return new Date(node1.pushed_at) < new Date(node2.pushed_at);
     });
     // let the dance begin...
     for (var i=0; i<projects.length; i++) {
@@ -58,7 +58,7 @@ function fillProjects(projects) {
         langspan.textContent = projects[i].language;
         info.appendChild(langspan);
 
-        var d = new Date(projects[i].updated_at);
+        var d = new Date(projects[i].pushed_at);
         infospan = document.createElement('span');
         infospan.textContent = 'Update date: ' + d.toDateString();
         info.appendChild(infospan);

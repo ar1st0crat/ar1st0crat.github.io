@@ -55,7 +55,7 @@
     position: absolute;
     left: 70px;
     top: 250px;
-    background: rgba(90,90,90,0.9);
+    background: rgba(60,60,60,0.9);
     padding-left: 120px;
     padding-right: 120px;
     padding-top: 15px;
@@ -68,6 +68,10 @@
 .project:hover .repolink {
     visibility: visible;
     cursor: pointer;
+    box-shadow: 5px 5px 2px 0 rgba(0,0,0,0.5);
+    transform: translate3d(0px, -100px, 0px);
+    -webkit-transition: transform 0.15s;
+    transition: transform 0.15s;
 }
 
 #commercial {
