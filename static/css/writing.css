@@ -84,8 +84,23 @@
     color: black;
     padding: 10px;
     margin-left: 20px;
-    font-size: 3em;
+    font-size: 1.2em;
     font-family: 'Marck script';
+}
+
+#versetitle {
+    display: block;
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.keyword {
+    display: inline-block;
+    //padding-top: -3px;
+    //padding-bottom: -3px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: -5px;
 }
 
 #github {

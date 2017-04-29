@@ -7,7 +7,7 @@ activities =
                Long story short, here are some of my albums ))): <br/><br/> \
                - Songs from the Bathroom (2007)<br/> \
                - Ocelot's Wind (2009)<br/> \
-               - Philosopher's Stone (2011)"
+               - The Philosopher (2011)"
     },
     {
         "name": "coding",

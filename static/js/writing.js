@@ -1,8 +1,59 @@
 imagePath = '../static/images/';
 lyrics = '';
 
+function getFrequentWords(collections) {
+    var separators = /([ .,;:!\?\(\)]+)/g;
+    var stop_words = ['без', 'под', 'над', 'перед', 'после', 'был', 'была', 'или', 'если', 'тем',
+                      'есть', 'этот', 'этим', 'этой', 'этими', 'моей', 'мне', 'ведь', 'этого', 'может',
+                      'мой', 'как', 'при', 'что', 'все', 'это', 'так', 'ней', 'лысый', 'нее', 'чтобы',
+                      'для', 'тебя', 'тебе', 'твой', 'твоей', 'его', 'ему', 'нам', 'своей', 'раз',
+                      'вас', 'кого', 'вам', 'хоть', 'нет', 'когда', 'даже', 'еще', 'уже', 'между',
+                      'было', 'лишь', 'тоже', 'вот', 'того', 'мной', 'него', 'быть', 'такой', 'вероники'];
+    var all_words = {};
+    for (var i = 0; i < 2; i++) {
+        var collection = collections[i].entries;
+        for (var j = 0; j < collection.length; j++) {
+            words = collection[j].name.replace(separators,' ').split(' ');
+            for (var k = 0; k < collection[j].text.length; k++) {
+                words.push.apply(words, collection[j].text[k].replace(separators,' ').split(' '));
+            }
+            words.forEach(function(w) {
+                w = w.toLowerCase();
+                if (w.length < 3 || stop_words.indexOf(w) > -1)
+                    return;
+                if (all_words[w])
+                    all_words[w]++;
+                else
+                    all_words[w] = 1;
+            });
+        }
+    }
+    return all_words;
+}
 
 function fillLyrics(collections) {
+    var frequent_words = getFrequentWords(collections);
+
+    var keywords = Object.keys(frequent_words).filter(function(w) {
+        return frequent_words[w] > 1;
+    });
+    keywords.sort(function(a, b) {
+        return Math.random() - 0.5;
+    });
+
+    var page = document.getElementById('text');
+    //page.innerHTML += '<br/>' + frequent_words.join(' ');
+    for (var i=0; i<keywords.length; i++) {
+        var keyword_span = document.createElement('span');
+        keyword_span.setAttribute('class', 'keyword');
+        keyword_span.textContent = keywords[i];
+        keyword_span.style.fontSize = +(frequent_words[keywords[i]] * 7 + 11) + 'px';
+        //keyword_span.style.top = +(i * 25) + 'px';
+        //keyword_span.style.left = '50px';
+        page.appendChild(keyword_span);
+        //page.innerHTML += '<span class="keyword">' + keywords[i] + '</span>';
+    }
+
     var container = document.getElementById('collections');
     
     for (var i=0; i<collections.length; i++) {
