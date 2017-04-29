@@ -42,16 +42,13 @@ function fillLyrics(collections) {
     });
 
     var page = document.getElementById('text');
-    //page.innerHTML += '<br/>' + frequent_words.join(' ');
+
     for (var i=0; i<keywords.length; i++) {
         var keyword_span = document.createElement('span');
         keyword_span.setAttribute('class', 'keyword');
         keyword_span.textContent = keywords[i];
-        keyword_span.style.fontSize = +(frequent_words[keywords[i]] * 7 + 11) + 'px';
-        //keyword_span.style.top = +(i * 25) + 'px';
-        //keyword_span.style.left = '50px';
+        keyword_span.style.fontSize = +(frequent_words[keywords[i]]*7 + 11) + 'px';
         page.appendChild(keyword_span);
-        //page.innerHTML += '<span class="keyword">' + keywords[i] + '</span>';
     }
 
     var container = document.getElementById('collections');

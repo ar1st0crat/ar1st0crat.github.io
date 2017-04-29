@@ -4,7 +4,7 @@
     cursor: pointer;
 }
 
-#projects {
+#commits, #projects {
     width: 80%;
     margin: 0 auto;
 }

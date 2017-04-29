@@ -16,6 +16,37 @@
 <body>
     <img src="../static/logo.svg" id="logo" onclick="location.href='../index.html'" />
     <img src="../static/images/coding.png" width="40" style="position:absolute; top: 65px;" />
+    <div id="commits">
+        <p>My GitHub activity</p>
+        <svg id="commitspanel" viewBox="0 0 630 290" width="630" height="290">
+            <text id="commits_no" x="400" y="100" style="font-size: 36px; fill: lightgreen;">
+                0 commits
+            </text>
+            <text id="repo_count" x="40" y="200" style="font-size: 28px; fill: lightyellow;">
+                0 repos
+            </text>
+            <text x="725" y="345" transform="rotate(22 890,-20)"
+                                  style="font-size: 12px; fill: white;">
+                Mon
+            </text>
+            <text x="710" y="360" transform="rotate(22 890,-20)"
+                                  style="font-size: 12px; fill: white;">
+                Wed
+            </text>
+            <text x="695" y="375" transform="rotate(22 890,-20)"
+                                  style="font-size: 12px; fill: white;">
+                Fri
+            </text>
+            <text id="date_now" x="580" y="405" transform="rotate(22 890,-20)"
+                                style="font-size: 12px; fill: yellow;">
+                ?
+            </text>
+            <text id="date_before" x="105" y="405" transform="rotate(22 890,-20)"
+                                style="font-size: 12px; fill: yellow;">
+                ?
+            </text>
+        </svg>
+    </div>
     <div id="projects">
         <p>GitHub pet projects</p>
     </div>

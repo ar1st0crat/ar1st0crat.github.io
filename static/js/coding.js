@@ -1,5 +1,110 @@
 imagePath = '../static/images/';
+var all_commits = [];
+var repo_count = 0;
 
+/** draw platform for 3d-commits */
+function drawCommitsPanel() {
+    var panel = document.getElementById('commitspanel');
+    var platform = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+    points = '0,62 528,274 612,240 84,29';
+    platform.setAttribute('points', points);
+    platform.setAttribute('fill', 'rgb(240,240,240)');
+    panel.appendChild(platform);
+    for (var i=0; i<52 /* number of weeks in year */; i++) {
+        var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute('x1', 10 + 10*i);
+        line.setAttribute('y1', 60 + 4*i);
+        line.setAttribute('x2', 82 + 10*i);
+        line.setAttribute('y2', 32 + 4*i);
+        line.setAttribute('stroke', 'rgb(212,212,212)');
+        panel.appendChild(line);
+    }
+    for (var i=0; i<=7 /* number of days in week */; i++) {
+        var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute('x1', 10 + 10*i);
+        line.setAttribute('y1', 60 - 4*i);
+        line.setAttribute('x2', 530 + 10*i);
+        line.setAttribute('y2', 268 - 4*i);
+        line.setAttribute('stroke', 'rgb(212,212,212)');
+        panel.appendChild(line);
+    }
+    var today = new Date();
+    document.getElementById('date_now').textContent = today.toDateString();
+    today.setMonth(today.getMonth() - 12);
+    document.getElementById('date_before').textContent = today.toDateString();
+}
+
+/** 
+commits[i].days    =>     [0, 1, 0, 0, 2, 0, 1]
+commits[i].total   =>     4
+*/
+function updateCommitsPanel(commits) {
+    var total_commits = 0;
+    if (all_commits.length === 0) {
+        all_commits = new Array(commits.length);
+        for (var i=0; i<commits.length; i++)
+            all_commits[i] = [0, 0, 0, 0, 0, 0, 0];
+    }
+    for (var i=0; i<all_commits.length; i++) {
+        for (var j=0; j<7; j++) {
+            all_commits[i][j] += commits[i].days[j];
+            total_commits += all_commits[i][j];
+        }
+    }
+
+    repo_count++;
+
+    var info = document.getElementById('commits_no');
+    info.textContent = total_commits + ' commits';
+    var repo = document.getElementById('repo_count');
+    repo.textContent = repo_count + ' repos';
+
+    var panel = document.getElementById('commitspanel');
+
+    // magic constants! real web-development! )))
+    for (var i=0; i<all_commits.length; i++) {
+        for (var j=6; j>=0; j--) {
+            if (all_commits[i][6-j] > 0) {
+                var poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+                poly.setAttribute('fill', 'rgb(20,' + +(255 - all_commits[i][6-j]*30) + ',20)');
+                var pts = +(10 + 10*i + 10*j) + ',' + +(50 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
+                          +(10 + 10*i + 10*j) + ',' + +(60 + 4*i - 4*j) + ' ' +
+                          +(20 + 10*i + 10*j) + ',' + +(64 + 4*i - 4*j) + ' ' +
+                          +(30 + 10*i + 10*j) + ',' + +(60 + 4*i - 4*j) + ' ' +
+                          +(30 + 10*i + 10*j) + ',' + +(50 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
+                          +(20 + 10*i + 10*j) + ',' + +(46 + 4*i - 4*j - all_commits[i][6-j]*9);
+                poly.setAttribute('points', pts);
+                poly.setAttribute('stroke', 'rgba(100,100,100,0.1)');
+                panel.appendChild(poly);
+                // add internal lines in each cube for better 3d look
+                var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                line.setAttribute('x1', 20 + 10*i + 10*j);
+                line.setAttribute('y1', 54 + 4*i - 4*j - all_commits[i][6-j]*9);
+                line.setAttribute('x2', 10 + 10*i + 10*j);
+                line.setAttribute('y2', 50 + 4*i - 4*j - all_commits[i][6-j]*9);
+                line.setAttribute('stroke', 'rgba(205,255,205,0.1)');
+                line.setAttribute('stroke-width', 1);
+                panel.appendChild(line);
+                line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                line.setAttribute('x1', 20 + 10*i + 10*j);
+                line.setAttribute('y1', 54 + 4*i - 4*j - all_commits[i][6-j]*9);
+                line.setAttribute('x2', 20 + 10*i + 10*j);
+                line.setAttribute('y2', 64 + 4*i - 4*j);
+                line.setAttribute('stroke', 'rgba(205,255,205,0.1)');
+                line.setAttribute('stroke-width', 1);
+                panel.appendChild(line);
+                line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                line.setAttribute('x1', 20 + 10*i + 10*j);
+                line.setAttribute('y1', 54 + 4*i - 4*j - all_commits[i][6-j]*9);
+                line.setAttribute('x2', 30 + 10*i + 10*j);
+                line.setAttribute('y2', 50 + 4*i - 4*j - all_commits[i][6-j]*9);
+                line.setAttribute('stroke', 'rgba(205,255,205,0.1)');
+                line.setAttribute('stroke-width', 1);
+                panel.appendChild(line);
+            }
+        }
+    }
+}
 
 function shouldProjectBeShown(project) {
     exclude = 
@@ -17,6 +122,15 @@ function shouldProjectBeShown(project) {
 
 function fillProjects(projects) {
     var container = document.getElementById('projects');
+
+    for (var i=0; i<projects.length; i++) {
+
+        loadJSON("https://api.github.com/repos/ar1st0crat/"  + projects[i].name + "/stats/commit_activity",
+                updateCommitsPanel,
+                function(xhr) { console.error(xhr); }
+        );
+    }
+
     // exclude repos for teaching
     projects = projects.filter(shouldProjectBeShown);
     // sort by update date in descending order
@@ -36,9 +150,7 @@ function fillProjects(projects) {
 
         loadFile("https://raw.githubusercontent.com/ar1st0crat/" + projects[i].name + "/master/README.md",
                 success(project),
-                function(xhr) { 
-                    console.error(xhr); 
-                }
+                function(xhr) { console.error(xhr); }
         );
 
         var info = document.createElement('div');
@@ -86,5 +198,6 @@ function parseScreenshot(readme, project) {
 }
 
 function createProjects() {
+    drawCommitsPanel();
     loadJSON("https://api.github.com/users/ar1st0crat/repos", fillProjects, function(xhr) { console.error(xhr); });
 }
