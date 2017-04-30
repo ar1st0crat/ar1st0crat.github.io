@@ -1,20 +1,20 @@
 imagePath = '../static/images/';
-var all_commits = [];
-var repo_count = 0;
+all_commits = [];
+repo_count = 0;
 
 /** draw platform for 3d-commits */
 function drawCommitsPanel() {
     var panel = document.getElementById('commitspanel');
     var platform = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-    points = '0,62 528,274 612,240 84,29';
+    points = '0,60 530,273 610,240 80,27';
     platform.setAttribute('points', points);
     platform.setAttribute('fill', 'rgb(240,240,240)');
     panel.appendChild(platform);
-    for (var i=0; i<52 /* number of weeks in year */; i++) {
+    for (var i=0; i<=52 /* number of weeks in year */; i++) {
         var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
         line.setAttribute('x1', 10 + 10*i);
         line.setAttribute('y1', 60 + 4*i);
-        line.setAttribute('x2', 82 + 10*i);
+        line.setAttribute('x2', 80 + 10*i);
         line.setAttribute('y2', 32 + 4*i);
         line.setAttribute('stroke', 'rgb(212,212,212)');
         panel.appendChild(line);
@@ -34,7 +34,7 @@ function drawCommitsPanel() {
     document.getElementById('date_before').textContent = today.toDateString();
 }
 
-/** 
+/** github api commit_activity returns something like this:
 commits[i].days    =>     [0, 1, 0, 0, 2, 0, 1]
 commits[i].total   =>     4
 */
@@ -66,7 +66,7 @@ function updateCommitsPanel(commits) {
         for (var j=6; j>=0; j--) {
             if (all_commits[i][6-j] > 0) {
                 var poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-                poly.setAttribute('fill', 'rgb(20,' + +(255 - all_commits[i][6-j]*30) + ',20)');
+                poly.setAttribute('fill', 'rgb(50,' + +(255 - all_commits[i][6-j]*30) + ',50)');
                 var pts = +(10 + 10*i + 10*j) + ',' + +(50 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
                           +(10 + 10*i + 10*j) + ',' + +(60 + 4*i - 4*j) + ' ' +
                           +(20 + 10*i + 10*j) + ',' + +(64 + 4*i - 4*j) + ' ' +
@@ -199,5 +199,6 @@ function parseScreenshot(readme, project) {
 
 function createProjects() {
     drawCommitsPanel();
-    loadJSON("https://api.github.com/users/ar1st0crat/repos", fillProjects, function(xhr) { console.error(xhr); });
+    loadJSON("https://api.github.com/users/ar1st0crat/repos",
+        fillProjects, function(xhr) { console.error(xhr); });
 }
