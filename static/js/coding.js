@@ -127,7 +127,11 @@ function fillProjects(projects) {
 
         loadJSON("https://api.github.com/repos/ar1st0crat/"  + projects[i].name + "/stats/commit_activity",
                 updateCommitsPanel,
-                function(xhr) { console.error(xhr); }
+                function(xhr) { console.error(xhr); },
+                function(xhr) {
+                    console.log(xhr.message);
+                    warningGithubActivity();
+                }
         );
     }
 
@@ -200,5 +204,22 @@ function parseScreenshot(readme, project) {
 function createProjects() {
     drawCommitsPanel();
     loadJSON("https://api.github.com/users/ar1st0crat/repos",
-        fillProjects, function(xhr) { console.error(xhr); });
+        fillProjects,
+        function(xhr) { console.error(xhr); },
+        function(xhr) {
+            console.log(xhr.message);
+            var warning = document.querySelector('#projects p');
+            warning.innerHTML = 'Could not load pet projects from github :-(<br/>Try again later';
+            warning.style.color = 'rgba(255,100,100, 0.8)';
+            warning.style.fontSize = '1.5em';
+            warningGithubActivity();
+        });
+}
+
+function warningGithubActivity() {
+    var warning = document.querySelector('#commits p');
+    warning.innerHTML = 'My GitHub activity<br/>\
+                            Not all repositories were processed by github API!<br/>\
+                            Try reloading the page';
+    warning.style.color = 'rgba(255,150,150, 0.8)';
 }

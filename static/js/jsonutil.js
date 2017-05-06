@@ -1,4 +1,4 @@
-function loadJSON(path, success, error) {
+function loadJSON(path, success, error, forbidden) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function()
     {
@@ -6,17 +6,23 @@ function loadJSON(path, success, error) {
             if (xhr.status === 200) {
                 if (success)
                     success(JSON.parse(xhr.responseText));
-            } else {
+            }
+            else if (xhr.status === 403) {
+                if (forbidden)
+                    forbidden(JSON.parse(xhr.responseText));
+            }
+            else {
                 if (error)
                     error(xhr);
             }
         }
     };
     xhr.open("GET", path, true);
+    xhr.setRequestHeader('User-Agent', 'ar1st0crat');
     xhr.send();
 }
 
-function loadFile(path, success, error) {
+function loadFile(path, success, error, notfound) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function()
     {
@@ -32,7 +38,8 @@ function loadFile(path, success, error) {
     };
     xhr.onload = function() {
         if (xhr.status === 404) {
-            return;
+            if (notfound)
+                notfound();
         }
     };
     xhr.open("GET", path, true);
