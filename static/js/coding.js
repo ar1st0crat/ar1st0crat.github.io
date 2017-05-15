@@ -1,4 +1,5 @@
 imagePath = '../static/images/';
+
 all_commits = [];
 repo_count = 0;
 
@@ -111,7 +112,6 @@ function shouldProjectBeShown(project) {
     [
         'algorithmscheatsheet',
         'ar1st0crat.github.io',
-        'console-blackjack',
         'digitalsignalprocessing',
         'oodesigncasestudies'
     ];
@@ -124,17 +124,34 @@ function fillProjects(projects) {
     var container = document.getElementById('projects');
 
     for (var i=0; i<projects.length; i++) {
-
-        loadJSON("https://api.github.com/repos/ar1st0crat/"  + projects[i].name + "/stats/commit_activity",
+        // this callback is needed when GitHub API rebuilds cache and info should be reloaded after some time
+        var reloadCallback = function(projname) {
+            return function(xhr) {
+                console.log(xhr.message);
+                document.querySelector('#commits p').innerHTML = 
+                    'My GitHub activity<br/>Please wait while GitHub updates activity info!';
+                setTimeout(function() { 
+                    reloadProject(projname);
+                }, 2000);
+            }
+        };
+        // requesting commit activity may end up with several different results
+        loadJSON("https://api.github.com/repos/ar1st0crat/" + projects[i].name + "/stats/commit_activity",
+                // if everything's OK
                 updateCommitsPanel,
-                function(xhr) { console.error(xhr); },
+                // error
+                function(xhr) { 
+                    console.error(xhr);
+                },
+                // forbidden
                 function(xhr) {
                     console.log(xhr.message);
                     warningGithubActivity();
-                }
+                },
+                // need to wait for github api cache build
+                reloadCallback(projects[i].name)
         );
     }
-
     // exclude repos for teaching
     projects = projects.filter(shouldProjectBeShown);
     // sort by update date in descending order
@@ -151,10 +168,12 @@ function fillProjects(projects) {
                 parseScreenshot(data, image);
             }
         };
-
+        
         loadFile("https://raw.githubusercontent.com/ar1st0crat/" + projects[i].name + "/master/README.md",
                 success(project),
-                function(xhr) { console.error(xhr); }
+                function(xhr) { 
+                    console.error(xhr); 
+                }
         );
 
         var info = document.createElement('div');
@@ -204,12 +223,17 @@ function parseScreenshot(readme, project) {
 function createProjects() {
     drawCommitsPanel();
     loadJSON("https://api.github.com/users/ar1st0crat/repos",
+        // OK
         fillProjects,
-        function(xhr) { console.error(xhr); },
+        // error
+        function(xhr) { 
+            console.error(xhr);
+        },
+        // forbidden
         function(xhr) {
             console.log(xhr.message);
             var warning = document.querySelector('#projects p');
-            warning.innerHTML = 'Could not load pet projects from github :-(<br/>Try again later';
+            warning.innerHTML = 'Could not load pet projects from GitHub :-(<br/>Try again later';
             warning.style.color = 'rgba(255,100,100, 0.8)';
             warning.style.fontSize = '1.5em';
             warningGithubActivity();
@@ -219,7 +243,32 @@ function createProjects() {
 function warningGithubActivity() {
     var warning = document.querySelector('#commits p');
     warning.innerHTML = 'My GitHub activity<br/>\
-                            Not all repositories were processed by github API!<br/>\
+                            Not all repositories were processed by GitHub API!<br/>\
                             Try reloading the page';
     warning.style.color = 'rgba(255,150,150, 0.8)';
+}
+
+function reloadProject(project) {
+    loadJSON("https://api.github.com/repos/ar1st0crat/"  + project + "/stats/commit_activity",
+                // if everything's OK
+                function(xhr) {
+                    updateCommitsPanel(xhr);
+                    document.querySelector('#commits p').innerHTML = 'My GitHub activity';
+                },
+                // error
+                function(xhr) { 
+                    console.error(xhr);
+                },
+                // forbidden
+                function(xhr) {
+                    console.log(xhr.message);
+                    warningGithubActivity();
+                },
+                // github api cache is still building, so just tell user to reload manually later
+                function(xhr) {
+                    console.log(project);
+                    document.querySelector('#commits p').innerHTML = 
+                        'My GitHub activity<br/>GitHub still updates activity info! Try reloading the page later';
+                }
+        );
 }
