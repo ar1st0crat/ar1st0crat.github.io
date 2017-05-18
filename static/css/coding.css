@@ -12,8 +12,8 @@
 .project {
     position: relative;
     display: inline-block;
-    width: 440px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
     overflow: auto;
     margin: 10px;
     padding: 10px;
@@ -27,10 +27,11 @@
 
 .project .info {
     background: rgba(240,240,240,0.9);
-    margin: 50px;
+    margin: 10px;
     padding: 20px;
     text-align: center;
     font-family: "Neucha";
+    font-size: 0.9em;
 }
 
 .info span {
@@ -53,11 +54,11 @@
 .repolink {
     visibility: hidden;
     position: absolute;
-    left: 70px;
+    left: 40px;
     top: 250px;
     background: rgba(60,60,60,0.9);
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 70px;
+    padding-right: 70px;
     padding-top: 15px;
     padding-bottom: 15px;
     vertical-align: middle;
@@ -69,7 +70,7 @@
     visibility: visible;
     cursor: pointer;
     box-shadow: 5px 5px 2px 0 rgba(0,0,0,0.5);
-    transform: translate3d(0px, -100px, 0px);
+    transform: translate3d(0px, -140px, 0px);
     -webkit-transition: transform 0.15s;
     transition: transform 0.15s;
 }

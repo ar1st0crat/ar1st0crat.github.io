@@ -234,7 +234,7 @@ function createProjects() {
             console.log(xhr.message);
             var warning = document.querySelector('#projects p');
             warning.innerHTML = 'Could not load pet projects from GitHub :-(<br/>Try again later';
-            warning.style.color = 'rgba(255,100,100, 0.8)';
+            warning.style.color = 'rgba(255,150,150, 0.8)';
             warning.style.fontSize = '1.5em';
             warningGithubActivity();
         });
