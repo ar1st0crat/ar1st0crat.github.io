@@ -24,7 +24,6 @@ function loadJSON(path, success, error, forbidden, waiting) {
         }
     };
     xhr.open("GET", path, true);
-    xhr.setRequestHeader('User-Agent', 'ar1st0crat');
     xhr.send();
 }
 

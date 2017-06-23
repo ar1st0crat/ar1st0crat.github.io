@@ -6,11 +6,10 @@ body {
     height: 100%;
     margin: 0;
     text-align: center;
-    background: rgb(50, 70, 100);
-    background: -webkit-linear-gradient(rgb(50, 70, 100) 0%, rgb(190, 195, 248) 100%);
-    background: -o-linear-gradient(rgb(50, 70, 100) 0%, rgb(190, 195, 248) 100%);
-    background: linear-gradient(rgb(50, 70, 100) 0%, rgb(190, 195, 248) 100%);
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
     font-family: "Bree Serif";
     color: white;
 }
