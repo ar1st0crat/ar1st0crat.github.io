@@ -37,7 +37,7 @@ activities =
         "pic": "science.png",
         "desc": "<br/>I'm interested in audio processing, fuzzy logic, machine learning and data mining. \
                 <br/><br/>Some of my papers can be found here"
-    },
+    }
 ];
 
 path = "static/images/";
