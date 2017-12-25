@@ -70,5 +70,14 @@
         "pages": "C.91-98",
         "year": "2016",
         "link": "2016 - Donnu.pdf"
+    },
+    {
+        "russian": "Распознавание голосовых команд управления роботом на основе спектра модуляции речевого сигнала",
+        "english": "Recognition of robot voice control commands based on the modulation spectrum of speech signal",
+        "authors": "Шарий Т.В., Черкашин Е.И.",
+        "journal": "Вестник Донецкого национального университета. Технические науки",
+        "pages": "",
+        "year": "2017",
+        "link": "2017 - Donnu.pdf"
     }
 ]
