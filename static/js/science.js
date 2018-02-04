@@ -6,7 +6,7 @@ function fillPapers(papers) {
     var container = document.getElementById('publications');
 
     papers.sort(function(node1, node2) {
-        return node1.year < node2.year;
+        return node2.year - node1.year;
     });
     
     for (var i=0; i<papers.length; i++) {

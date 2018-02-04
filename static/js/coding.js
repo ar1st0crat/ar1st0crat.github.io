@@ -156,7 +156,11 @@ function fillProjects(projects) {
     projects = projects.filter(shouldProjectBeShown);
     // sort by update date in descending order
     projects.sort(function(node1, node2) {
-        return new Date(node1.pushed_at) < new Date(node2.pushed_at);
+        var date1 = new Date(node1.pushed_at);
+        var date2 = new Date(node2.pushed_at);
+        if (date1 > date2) return -1;
+        if (date1 < date2) return 1;
+        return 0;
     });
     // let the dance begin...
     for (var i=0; i<projects.length; i++) {
