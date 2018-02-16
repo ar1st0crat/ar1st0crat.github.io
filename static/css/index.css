@@ -46,6 +46,21 @@
     font-size:  0.8em;
 }
 
+#links {
+    position: fixed;
+    width: 340px;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#photo {
+     position: absolute;
+     top: -6px;
+     left: 255px;
+     height: 105px;
+}
+
 .language {
     width: 90px;
     height: 90px;

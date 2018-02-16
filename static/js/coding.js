@@ -113,7 +113,8 @@ function shouldProjectBeShown(project) {
         'algorithmscheatsheet',
         'ar1st0crat.github.io',
         'digitalsignalprocessing',
-        'oodesigncasestudies'
+        'oodesigncasestudies',
+        'paper2017winter'
     ];
     var name = project.name.toLowerCase();
 
