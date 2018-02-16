@@ -46,19 +46,17 @@
     font-size:  0.8em;
 }
 
-#links {
-    position: fixed;
-    width: 340px;
-    height: 300px;
-    left: 50%;
-    transform: translateX(-50%);
+#aboutme {
+    display: flex;
+    flex-direction: row;
+    font-size:  0.9em;
 }
 
 #photo {
-     position: absolute;
-     top: -6px;
-     left: 255px;
-     height: 105px;
+     height: 110px;
+     margin-left: 27px;
+     margin-right: 17px;
+     margin-top: 20px;
 }
 
 .language {
