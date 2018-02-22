@@ -45,7 +45,7 @@ path = "static/images/";
 DEFAULT_DESC = "<div id='aboutme'><div><p>Hi there! I'm Tim.</p> \
                I like unravelling mysteries of all kinds and learning everything that human mind can possibly bring us, \
                i.e. science, music, poetry, arts, philosophy, etc.</div>\
-               <img id='photo' src='static/images/me.png' /></div>";
+               <div id='photo'><div id='photo_copyright'>Author: <a href='https://github.com/KruKrush'>KruKrush</a></div></div></div>";
 
 
 function createActivities() {
