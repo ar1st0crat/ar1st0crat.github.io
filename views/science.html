@@ -10,13 +10,15 @@
     <script type="text/javascript" src="../static/js/jsonutil.js"></script>
     <script type="text/javascript" src="../static/js/science.js"></script>
     <script type="text/javascript">
-        window.onload = createPapers;
+        window.onload = function() {
+            createPapers();
+            createHandlers();
+        }
     </script>
 </head>
 <body>
     <img src="../static/logo.svg" id="logo" onclick="location.href='../index.html'" />
     <img src="../static/images/science.png" width="40" style="position:absolute; top: 65px;" />
-    
     <div id="skills">
         <p>Scientific interests and skills</p>
         <div id="dsp" onmouseenter="showSkills('dsp');" onmouseleave="hideSkills('dsp');">
@@ -37,24 +39,33 @@
     <div id="publications">
         <p>Selected publications:</p>
     </div>
+    <p>My earlier research in brief</p>
+    
     <div id="research">
-        <p>My earlier research in brief</p>
-        <div>
-            <p class="researchname">Speech data processing based on soft computing models</p>
-            <img src="../static/images/research.png" />
-            <p>Key features of the proposed technology:
-                <span>it segments a speech signal automatically on basis of Mel-Frequency Cepstrum (MFCC) and phonological differential features</span>
-                <img src="../static/images/segmentation.png" />
-                <span>it evaluates weights of speech segments depending on their perception by human (prosodic features are analyzed)</span>
-                <img src="../static/images/prosody.png" />
-                <span>it post-processes MFCC coefficients using Principal Component Analysis</span>
-                <img src="../static/images/pca.png" />
-                <span>it processes speech information at several levels: prosodic level, phonological feature level, phoneme level and word level</span>
-                <img src="../static/images/phonology.png" />
-                <span>it introduces the FCAS model whose kernel slightly resembles TRACE and LSTM networks</span>
-                <img src="../static/images/fcas.png" />
-            </p>
+        <div class="rs">
+            <img src="../static/images/segmentation.png" />
+            <span>Segmenting</span>
         </div>
+        <div class="rs">
+            <img src="../static/images/prosody.png" />
+            <span>Prosody</span>
+        </div>
+        <div class="rs">
+            <img src="../static/images/pca.png" />
+            <span>MFCC-PCA</span>
+        </div>
+        <div class="rs">
+            <img src="../static/images/phonology.png" />
+            <span>Multi-level</span>
+        </div>
+        <div class="rs">
+            <img src="../static/images/fcas.png" />
+            <span>FCAS network</span>
+        </div>
+    </div>
+    <p id="researchname">Speech data processing based on soft computing models</p>
+    <div>
+        <img id="showscreen" src="../static/images/research.png" />
     </div>
     <a href="https://github.com/ar1st0crat">
         <img src="../static/images/github.png" id="github" alt="github.com/ar1st0crat"/>

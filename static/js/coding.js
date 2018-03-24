@@ -43,7 +43,7 @@ function updateCommitsPanel(commits) {
     var total_commits = 0;
     if (all_commits.length === 0) {
         all_commits = new Array(commits.length);
-        for (var i=0; i<commits.length; i++)
+        for (var i=0; i<all_commits.length; i++)
             all_commits[i] = [0, 0, 0, 0, 0, 0, 0];
     }
     for (var i=0; i<all_commits.length; i++) {
@@ -77,6 +77,17 @@ function updateCommitsPanel(commits) {
                 poly.setAttribute('points', pts);
                 poly.setAttribute('stroke', 'rgba(100,100,100,0.1)');
                 panel.appendChild(poly);
+
+                poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+                poly.setAttribute('fill', 'rgb(50,' + +(240 - all_commits[i][6-j]*30) + ',50)');
+                var pts = +(10 + 10*i + 10*j) + ',' + +(50 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
+                          +(10 + 10*i + 10*j) + ',' + +(60 + 4*i - 4*j) + ' ' +
+                          +(20 + 10*i + 10*j) + ',' + +(64 + 4*i - 4*j) + ' ' +
+                          +(20 + 10*i + 10*j) + ',' + +(54 + 4*i - 4*j - all_commits[i][6-j]*9);
+                poly.setAttribute('points', pts);
+                poly.setAttribute('stroke', 'rgba(100,100,100,0.1)');
+                panel.appendChild(poly);
+
                 // add internal lines in each cube for better 3d look
                 var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
                 line.setAttribute('x1', 20 + 10*i + 10*j);
@@ -153,6 +164,7 @@ function fillProjects(projects) {
                 reloadCallback(projects[i].name)
         );
     }
+
     // exclude repos for teaching
     projects = projects.filter(shouldProjectBeShown);
     // sort by update date in descending order

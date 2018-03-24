@@ -91,3 +91,44 @@ function hideSkills(id) {
     elem.style.paddingTop = '45px';
     elem.style.fontSize = '26px';
 }
+
+research = [
+    'Speech signal is segmented automatically on basis of Mel-Frequency Cepstrum (MFCC) and phonological differential features',
+    'The weights of speech segments are evaluated depending on their perception by human (prosodic features are analyzed)',
+    'The Principal Component Analysis is used for post-processing of MFCC coefficients',
+    'Speech information is processed at several levels: prosodic level, phonological feature level, phoneme level and word level',
+    'Backend relies on the FCAS model whose kernel slightly resembles TRACE and LSTM networks'
+];
+
+function createHandlers() {
+    curSel = null;
+    var elems = document.getElementsByClassName('rs');
+    for (var i=0; i<elems.length; i++) {
+        elems[i].onclick = handler(i, elems[i]);
+    }
+    document.onclick = handler(-1);
+}
+
+function handler(pos, elem) {
+    
+    return function(event) {
+        if (pos < 0) {
+            if (curSel !== null) curSel.classList.remove('selected');
+            curSel = null;
+
+            document.getElementById('researchname').textContent = 'Speech data processing based on soft computing models';
+            document.getElementById('showscreen').setAttribute('src', '../static/images/research.png');
+        }
+        else {
+            document.getElementById('researchname').textContent = research[pos];
+            var img = elem.getElementsByTagName('img')[0];
+            document.getElementById('showscreen').setAttribute('src', img.getAttribute('src'));
+            var span = elem.getElementsByTagName('span')[0];
+            span.classList.toggle('selected');
+            if (curSel !== null) curSel.classList.remove('selected');
+            curSel = span;
+
+            event.stopPropagation();
+        }
+    }
+}

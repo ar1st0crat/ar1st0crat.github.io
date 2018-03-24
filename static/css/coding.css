@@ -83,17 +83,17 @@
     width: 80%;
 }
 
-#commercial div {
+#commercial > div {
     margin-top: 50px;
     margin-bottom: 80px;
 }
 
-#commercial img {
+#commercial > img {
     width: 70%;
     margin: 20px;
 }
 
-#commercial span {
+#commercial > div > span {
     display: inline-block;
     border-radius: 10px;
     padding-top: 2px;
@@ -112,4 +112,29 @@
     color: rgb(250,250,80);
     font-size: 1.2em;
     text-shadow: 2px 2px black;
+}
+
+.comproject {
+    margin-top: 30px;
+    font-size: 0.75em;
+    border-radius: 12px;
+    box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.5);
+}
+
+.comproject > img {
+    float: left;
+    height:250px;
+    width: 320px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.comproject > p {
+    display: table-cell;
+    background-color: rgba(250, 150, 150, 0.2);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 20px;
+    height: 210px;
+    vertical-align: middle;
 }
