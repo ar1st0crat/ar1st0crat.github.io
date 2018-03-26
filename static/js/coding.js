@@ -7,25 +7,25 @@ repo_count = 0;
 function drawCommitsPanel() {
     var panel = document.getElementById('commitspanel');
     var platform = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-    points = '0,60 530,273 610,240 80,27';
+    points = '0,90 530,303 610,270 80,57';
     platform.setAttribute('points', points);
     platform.setAttribute('fill', 'rgb(240,240,240)');
     panel.appendChild(platform);
     for (var i=0; i<=52 /* number of weeks in year */; i++) {
         var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
         line.setAttribute('x1', 10 + 10*i);
-        line.setAttribute('y1', 60 + 4*i);
+        line.setAttribute('y1', 90 + 4*i);
         line.setAttribute('x2', 80 + 10*i);
-        line.setAttribute('y2', 32 + 4*i);
+        line.setAttribute('y2', 62 + 4*i);
         line.setAttribute('stroke', 'rgb(212,212,212)');
         panel.appendChild(line);
     }
     for (var i=0; i<=7 /* number of days in week */; i++) {
         var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
         line.setAttribute('x1', 10 + 10*i);
-        line.setAttribute('y1', 60 - 4*i);
+        line.setAttribute('y1', 90 - 4*i);
         line.setAttribute('x2', 530 + 10*i);
-        line.setAttribute('y2', 268 - 4*i);
+        line.setAttribute('y2', 298 - 4*i);
         line.setAttribute('stroke', 'rgb(212,212,212)');
         panel.appendChild(line);
     }
@@ -68,22 +68,22 @@ function updateCommitsPanel(commits) {
             if (all_commits[i][6-j] > 0) {
                 var poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
                 poly.setAttribute('fill', 'rgb(50,' + +(255 - all_commits[i][6-j]*30) + ',50)');
-                var pts = +(10 + 10*i + 10*j) + ',' + +(50 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
-                          +(10 + 10*i + 10*j) + ',' + +(60 + 4*i - 4*j) + ' ' +
-                          +(20 + 10*i + 10*j) + ',' + +(64 + 4*i - 4*j) + ' ' +
-                          +(30 + 10*i + 10*j) + ',' + +(60 + 4*i - 4*j) + ' ' +
-                          +(30 + 10*i + 10*j) + ',' + +(50 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
-                          +(20 + 10*i + 10*j) + ',' + +(46 + 4*i - 4*j - all_commits[i][6-j]*9);
+                var pts = +(10 + 10*i + 10*j) + ',' + +(80 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
+                          +(10 + 10*i + 10*j) + ',' + +(90 + 4*i - 4*j) + ' ' +
+                          +(20 + 10*i + 10*j) + ',' + +(94 + 4*i - 4*j) + ' ' +
+                          +(30 + 10*i + 10*j) + ',' + +(90 + 4*i - 4*j) + ' ' +
+                          +(30 + 10*i + 10*j) + ',' + +(80 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
+                          +(20 + 10*i + 10*j) + ',' + +(76 + 4*i - 4*j - all_commits[i][6-j]*9);
                 poly.setAttribute('points', pts);
                 poly.setAttribute('stroke', 'rgba(100,100,100,0.1)');
                 panel.appendChild(poly);
 
                 poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
                 poly.setAttribute('fill', 'rgb(50,' + +(240 - all_commits[i][6-j]*30) + ',50)');
-                var pts = +(10 + 10*i + 10*j) + ',' + +(50 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
-                          +(10 + 10*i + 10*j) + ',' + +(60 + 4*i - 4*j) + ' ' +
-                          +(20 + 10*i + 10*j) + ',' + +(64 + 4*i - 4*j) + ' ' +
-                          +(20 + 10*i + 10*j) + ',' + +(54 + 4*i - 4*j - all_commits[i][6-j]*9);
+                var pts = +(10 + 10*i + 10*j) + ',' + +(80 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
+                          +(10 + 10*i + 10*j) + ',' + +(90 + 4*i - 4*j) + ' ' +
+                          +(20 + 10*i + 10*j) + ',' + +(94 + 4*i - 4*j) + ' ' +
+                          +(20 + 10*i + 10*j) + ',' + +(84 + 4*i - 4*j - all_commits[i][6-j]*9);
                 poly.setAttribute('points', pts);
                 poly.setAttribute('stroke', 'rgba(100,100,100,0.1)');
                 panel.appendChild(poly);
@@ -91,25 +91,25 @@ function updateCommitsPanel(commits) {
                 // add internal lines in each cube for better 3d look
                 var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
                 line.setAttribute('x1', 20 + 10*i + 10*j);
-                line.setAttribute('y1', 54 + 4*i - 4*j - all_commits[i][6-j]*9);
+                line.setAttribute('y1', 84 + 4*i - 4*j - all_commits[i][6-j]*9);
                 line.setAttribute('x2', 10 + 10*i + 10*j);
-                line.setAttribute('y2', 50 + 4*i - 4*j - all_commits[i][6-j]*9);
+                line.setAttribute('y2', 80 + 4*i - 4*j - all_commits[i][6-j]*9);
                 line.setAttribute('stroke', 'rgba(205,255,205,0.1)');
                 line.setAttribute('stroke-width', 1);
                 panel.appendChild(line);
                 line = document.createElementNS("http://www.w3.org/2000/svg", "line");
                 line.setAttribute('x1', 20 + 10*i + 10*j);
-                line.setAttribute('y1', 54 + 4*i - 4*j - all_commits[i][6-j]*9);
+                line.setAttribute('y1', 84 + 4*i - 4*j - all_commits[i][6-j]*9);
                 line.setAttribute('x2', 20 + 10*i + 10*j);
-                line.setAttribute('y2', 64 + 4*i - 4*j);
+                line.setAttribute('y2', 94 + 4*i - 4*j);
                 line.setAttribute('stroke', 'rgba(205,255,205,0.1)');
                 line.setAttribute('stroke-width', 1);
                 panel.appendChild(line);
                 line = document.createElementNS("http://www.w3.org/2000/svg", "line");
                 line.setAttribute('x1', 20 + 10*i + 10*j);
-                line.setAttribute('y1', 54 + 4*i - 4*j - all_commits[i][6-j]*9);
+                line.setAttribute('y1', 84 + 4*i - 4*j - all_commits[i][6-j]*9);
                 line.setAttribute('x2', 30 + 10*i + 10*j);
-                line.setAttribute('y2', 50 + 4*i - 4*j - all_commits[i][6-j]*9);
+                line.setAttribute('y2', 80 + 4*i - 4*j - all_commits[i][6-j]*9);
                 line.setAttribute('stroke', 'rgba(205,255,205,0.1)');
                 line.setAttribute('stroke-width', 1);
                 panel.appendChild(line);

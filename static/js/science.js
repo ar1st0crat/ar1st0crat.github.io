@@ -120,12 +120,13 @@ function handler(pos, elem) {
             document.getElementById('showscreen').setAttribute('src', '../static/images/research.png');
         }
         else {
+            if (curSel !== null) curSel.classList.remove('selected');
+
             document.getElementById('researchname').textContent = research[pos];
             var img = elem.getElementsByTagName('img')[0];
             document.getElementById('showscreen').setAttribute('src', img.getAttribute('src'));
             var span = elem.getElementsByTagName('span')[0];
-            span.classList.toggle('selected');
-            if (curSel !== null) curSel.classList.remove('selected');
+            span.classList.add('selected');
             curSel = span;
 
             event.stopPropagation();
