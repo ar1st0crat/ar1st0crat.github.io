@@ -158,3 +158,58 @@
 .selected {
     color: rgb(255,255,0);
 }
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8) rotate(-7deg);
+    }
+    30%
+    {
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25) rotate(-7deg);
+    }
+    60%
+    {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8) rotate(-7deg);
+    }
+    100%
+    {
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25) rotate(-7deg);
+    }
+}
+
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8) rotate(-7deg);
+    }
+    30%
+    {
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25) rotate(-7deg);
+    }
+    60%
+    {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8) rotate(-7deg);
+    }
+    100%
+    {
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25) rotate(-7deg);
+    }
+}
+
+.rs:hover {
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
