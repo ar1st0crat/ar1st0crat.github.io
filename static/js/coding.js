@@ -88,6 +88,16 @@ function updateCommitsPanel(commits) {
                 poly.setAttribute('stroke', 'rgba(100,100,100,0.1)');
                 panel.appendChild(poly);
 
+                poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+                poly.setAttribute('fill', 'rgb(50,' + +(248 - all_commits[i][6-j]*30) + ',50)');
+                var pts = +(10 + 10*i + 10*j) + ',' + +(80 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
+                          +(20 + 10*i + 10*j) + ',' + +(76 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
+                          +(30 + 10*i + 10*j) + ',' + +(80 + 4*i - 4*j - all_commits[i][6-j]*9) + ' ' +
+                          +(20 + 10*i + 10*j) + ',' + +(84 + 4*i - 4*j - all_commits[i][6-j]*9);
+                poly.setAttribute('points', pts);
+                poly.setAttribute('stroke', 'rgba(100,100,100,0.1)');
+                panel.appendChild(poly);
+
                 // add internal lines in each cube for better 3d look
                 var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
                 line.setAttribute('x1', 20 + 10*i + 10*j);
