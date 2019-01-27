@@ -6,7 +6,7 @@ body {
     height: 100%;
     margin: 0;
     text-align: center;
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAA8klEQVQoUzWOO0sDQRRGz53ZSTYb0SSGJIggPhK1skjQzmajpVj5t/ybgmDhI7rZmXvDFMLHVx0ORx6fX+16dMVYR2w3kRiUaqq09sXn3zsf7RuyuH+xjh/TCQMsQdQfJscFfWvR3w0pNcjpXW0+FXh1qFNa2TIbdZn1+sTkaSmQs+WDIeThDNSg2hNODvYR52hwGaoNETAylg9EGVaBSS/gOgE5X9bmnAPLlKCAV0goZRk46naRxWptYv+ibDQ8EZ+EKAXBJWS+rC33CIJ3ucsTLXBo31w0LfMgyOXt2qIaAaEwozLHKjY8DT03g5LppGQHcsZbIowK6WIAAAAASUVORK5CYII=");
+    background-image: url("../images/back.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
