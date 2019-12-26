@@ -79,5 +79,23 @@
         "pages": "",
         "year": "2017",
         "link": "2017 - Donnu.pdf"
+    },
+    {
+        "russian": "Автоматическое обнаружение звуковых дефектов в аудиофайлах",
+        "english": "Automatic detection of sound defects in audio files",
+        "authors": "Шарий Т.В., Мартынов М.В.",
+        "journal": "Вестник Донецкого национального университета. Технические науки",
+        "pages": "",
+        "year": "2019",
+        "link": "2019a - Donnu.pdf"
+    },
+    {
+        "russian": "Об особенностях реализации цифровых линейных фильтров на платформах .NET Framework и .NET Core",
+        "english": "On specifics of digital linear filters realization on .NET Framework and .NET Core platforms",
+        "authors": "Шарий Т.В.",
+        "journal": "Вестник Донецкого национального университета. Технические науки",
+        "pages": "",
+        "year": "2019",
+        "link": "2019b - Donnu.pdf"
     }
 ]

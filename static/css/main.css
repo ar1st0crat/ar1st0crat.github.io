@@ -31,15 +31,14 @@ body {
     display: inline;
 }
 
-#github {
-    margin: 5px;
+.social {
     width: 36px;
     height: 36px;
     opacity: 0.6;
     cursor: pointer;
 }
 
-#github:hover {
+.social:hover {
     opacity: 1;
 }
 
