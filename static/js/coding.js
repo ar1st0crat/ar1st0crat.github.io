@@ -195,12 +195,22 @@ function fillProjects(projects) {
                 parseScreenshot(data, image);
             }
         };
+
+        var tryMainBranch = function(project, projectName) {
+            return function(xhr) { 
+                    console.log('trying <main> instead of <master>...'); 
+                    loadFile("https://raw.githubusercontent.com/ar1st0crat/" + projectName + "/main/README.md",
+                            success(project),
+                            function(xhr) { 
+                                console.error(xhr);
+                            }
+                    );
+            }
+        };
         
         loadFile("https://raw.githubusercontent.com/ar1st0crat/" + projects[i].name + "/master/README.md",
                 success(project),
-                function(xhr) { 
-                    console.error(xhr); 
-                }
+                tryMainBranch(project, projects[i].name)
         );
 
         var info = document.createElement('div');
