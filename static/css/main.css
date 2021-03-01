@@ -6,10 +6,7 @@ body {
     height: 100%;
     margin: 0;
     text-align: center;
-    background-image: url("../images/back.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background: #505050;
     font-family: "Bree Serif";
     color: white;
 }
@@ -46,7 +43,7 @@ body {
     color: white;
     font-family: 'Bree Serif';
     font-size:  14px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
 }
 
 #filler {
