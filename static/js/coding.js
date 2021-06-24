@@ -131,6 +131,7 @@ function updateCommitsPanel(commits) {
 function shouldProjectBeShown(project) {
     exclude = 
     [
+        'ar1st0crat',
         'algorithmscheatsheet',
         'ar1st0crat.github.io',
         'digitalsignalprocessing',
