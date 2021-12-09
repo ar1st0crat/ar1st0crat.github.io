@@ -1,36 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=480, initial-scale=0.75, user-scalable=no">
-    <title>ar1st0cratic pages</title>
-    <link rel="icon" type="image/png" href="https://avatars0.githubusercontent.com/u/11902122?v=4&s=100">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" /> 
-    <link rel="stylesheet" type="text/css" href="static/css/index.css" />
-    <script type="text/javascript" src="static/js/index.js"></script>
-    <script>
-        window.onload = createActivities;
-    </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=380, initial-scale=0.84, user-scalable=no">
+  <link rel="icon" type="image/png" href="https://avatars0.githubusercontent.com/u/11902122?v=4&s=100">
+  <title>Tim Sharii</title>
+  <style type="text/css">
+
+    html, body {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      background-color: #F9F4ED;
+      font-family: "Averia Serif Libre";
+      text-align: center;
+    }
+
+    ::-moz-selection { 
+      color: #8a8a9a;
+      background: none;
+    }
+
+    ::selection { 
+      color: #8a8a9a;
+      background: none;
+    }
+
+    a:link, a:visited {
+      color: #920202;
+      text-decoration: none;
+    }
+
+    header {
+      height: 50vh;
+      background-color: #2f2a2f;
+      text-align: center;
+      display: flex;
+      margin: 0 auto;
+    }
+
+    #main {
+      height: 50vh;
+      background-color: #F9F4ED;
+    }
+
+    #main img {
+      border-radius: 50%;
+      margin-top: -62px;
+      margin-bottom: 20px;
+    }
+
+    #main div {
+        width: 360px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+    }
+
+    #upper {
+      width: 420px;
+      left: 50%;
+      transform: translateX(-50%);
+      align-self: flex-end;
+      margin-bottom: 80px;
+      position: absolute;
+      text-align: center;
+    }
+
+    #links {
+      margin-left: 260px;
+      margin-bottom: -74px;
+    }
+
+    .social {
+      width: 30px;
+      height: 30px;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    .social:hover {
+      opacity: 1;
+    }
+
+    #name {
+      color: #F9F4ED;
+      margin-top: 34px;
+      margin-bottom: -51px;
+      font-size: 36px;
+      margin-left: -260px;
+      font-family: "Road Rage";
+    }
+
+    #copyright {
+      font-size: 0.8em;
+    }
+
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=Road+Rage&display=swap" rel="stylesheet">
 </head>
 <body>
-<div>
-    <img src="static/logo.svg" id="logo" />
-    <div id="container">
-        <div id="main" />
+  <header>
+    <div id="upper">
+      <img src="static/logo.svg" width="400" />
+      <div id="name">
+        Tim Sharii
+      </div>
+      <p id="links">
+        <a href="https://github.com/ar1st0crat"><img src="static/images/github.png" class="social" alt="github.com/ar1st0crat" /></a>
+        <a href="https://www.youtube.com/channel/UC32I_hakQDYMZ0wWzEm3tIA"><img src="static/images/youtube.png" class="social" alt="Youtube channel" /></a>
+        <a href="https://t.me/tim_sharii"><img src="static/images/telegram.png" class="social" alt="t.me/tim_sharii" /></a>
+      </p>
     </div>
-    <div id="desc"></div>
+  </header>
+  <div id="main">
+    <img src="static/images/pic.png" height="124" />
     <div>
-        <p>
-            <a href="https://github.com/ar1st0crat"><img src="static/images/github.png" class="social" alt="github.com/ar1st0crat" /></a>
-            <a href="https://t.me/tim_sharii"><img src="static/images/telegram.png" class="social" alt="t.me/tim_sharii" /></a>
-            <a href="https://www.youtube.com/channel/UC32I_hakQDYMZ0wWzEm3tIA"><img src="static/images/youtube.png" class="social" alt="channel" /></a>
-        </p>
-        <div id="about">
-            &copy; 2021 Tim Sharii<br/>
-            art1st.prog<span id="filler">at</span>gmail.com
-        </div>
+      R&amp;D engineer /
+      Software developer /
+      Teacher 
+      <p>interested in digital audio processing <br/> and machine learning.</p>
+      <p>
+        <a href="welcome.html" style="font-size: 0.8em">Welcome</a>
+      </p>
+      <div id="copyright">
+        &copy; 2022 <br/> 
+        art1st.prog at gmail.com
+      </div>
     </div>
+  </div>
 </div>
 </body>
 </html>
